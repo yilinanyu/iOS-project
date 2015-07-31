@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EDEE1A21B6AF4C900459E77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A11B6AF4C900459E77 /* main.m */; };
+		3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */; };
+		3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */; };
+		3EDEE1AD1B6AF4C900459E77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */; };
+		3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */; };
+		3EDEE1BC1B6AF4CA00459E77 /* EmpowerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1BB1B6AF4CA00459E77 /* EmpowerDemoTests.m */; };
+		3EDEE1C71B6AF56700459E77 /* TrackingMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1C61B6AF56700459E77 /* TrackingMapView.m */; };
+		3EDEE1CC1B6AF59800459E77 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */; };
+		3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */; };
+		3EDEE1EE1B6AF5BF00459E77 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1CF1B6AF5BF00459E77 /* PNBar.m */; };
+		3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1D11B6AF5BF00459E77 /* PNBarChart.m */; };
+		3EDEE1F01B6AF5BF00459E77 /* PNChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1D51B6AF5BF00459E77 /* PNChartLabel.m */; };
+		3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1D71B6AF5BF00459E77 /* PNCircleChart.m */; };
+		3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1D91B6AF5BF00459E77 /* PNColor.m */; };
+		3EDEE1F31B6AF5BF00459E77 /* PNGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1DB1B6AF5BF00459E77 /* PNGenericChart.m */; };
+		3EDEE1F41B6AF5BF00459E77 /* PNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1DD1B6AF5BF00459E77 /* PNLineChart.m */; };
+		3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1DF1B6AF5BF00459E77 /* PNLineChartData.m */; };
+		3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1E11B6AF5BF00459E77 /* PNLineChartDataItem.m */; };
+		3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1E31B6AF5BF00459E77 /* UICountingLabel.m */; };
+		3EDEE1F81B6AF5BF00459E77 /* PNScatterChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1E41B6AF5BF00459E77 /* PNScatterChart.m */; };
+		3EDEE1F91B6AF5BF00459E77 /* PNScatterChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1E61B6AF5BF00459E77 /* PNScatterChartData.m */; };
+		3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1E81B6AF5BF00459E77 /* PNScatterChartDataItem.m */; };
+		3EDEE1FB1B6AF5BF00459E77 /* PNPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1EA1B6AF5BF00459E77 /* PNPieChart.m */; };
+		3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1EC1B6AF5BF00459E77 /* PNPieChartDataItem.m */; };
+		3EDEE1FF1B6AF62D00459E77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE1FE1B6AF62D00459E77 /* QuartzCore.framework */; };
+		3EDEE2011B6AF63500459E77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2001B6AF63500459E77 /* CoreLocation.framework */; };
+		3EDEE2031B6AF63D00459E77 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2021B6AF63D00459E77 /* MapKit.framework */; };
+		3EDEE2051B6AF64500459E77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2041B6AF64500459E77 /* Foundation.framework */; };
+		3EDEE2071B6AF65000459E77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2061B6AF65000459E77 /* UIKit.framework */; };
+		3EDEE2091B6AF65E00459E77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */; };
+		3EDEE20B1B6AF8CB00459E77 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEE20A1B6AF8CB00459E77 /* arrow.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EDEE1B61B6AF4CA00459E77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EDEE1941B6AF4C900459E77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EDEE19B1B6AF4C900459E77;
+			remoteInfo = EmpowerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3EDEE19C1B6AF4C900459E77 /* EmpowerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpowerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EDEE1A01B6AF4C900459E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EDEE1A11B6AF4C900459E77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3EDEE1A31B6AF4C900459E77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3EDEE1A61B6AF4C900459E77 /* BTGlassScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollViewController.h; sourceTree = "<group>"; };
+		3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollViewController.m; sourceTree = "<group>"; };
+		3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3EDEE1AF1B6AF4C900459E77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3EDEE1B51B6AF4CA00459E77 /* EmpowerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpowerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EDEE1BB1B6AF4CA00459E77 /* EmpowerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmpowerDemoTests.m; sourceTree = "<group>"; };
+		3EDEE1C51B6AF56700459E77 /* TrackingMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingMapView.h; sourceTree = "<group>"; };
+		3EDEE1C61B6AF56700459E77 /* TrackingMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingMapView.m; sourceTree = "<group>"; };
+		3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
+		3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
+		3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		3EDEE1CE1B6AF5BF00459E77 /* PNBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBar.h; sourceTree = "<group>"; };
+		3EDEE1CF1B6AF5BF00459E77 /* PNBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBar.m; sourceTree = "<group>"; };
+		3EDEE1D01B6AF5BF00459E77 /* PNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBarChart.h; sourceTree = "<group>"; };
+		3EDEE1D11B6AF5BF00459E77 /* PNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBarChart.m; sourceTree = "<group>"; };
+		3EDEE1D21B6AF5BF00459E77 /* PNChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChart.h; sourceTree = "<group>"; };
+		3EDEE1D31B6AF5BF00459E77 /* PNChartDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartDelegate.h; sourceTree = "<group>"; };
+		3EDEE1D41B6AF5BF00459E77 /* PNChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartLabel.h; sourceTree = "<group>"; };
+		3EDEE1D51B6AF5BF00459E77 /* PNChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNChartLabel.m; sourceTree = "<group>"; };
+		3EDEE1D61B6AF5BF00459E77 /* PNCircleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNCircleChart.h; sourceTree = "<group>"; };
+		3EDEE1D71B6AF5BF00459E77 /* PNCircleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNCircleChart.m; sourceTree = "<group>"; };
+		3EDEE1D81B6AF5BF00459E77 /* PNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNColor.h; sourceTree = "<group>"; };
+		3EDEE1D91B6AF5BF00459E77 /* PNColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNColor.m; sourceTree = "<group>"; };
+		3EDEE1DA1B6AF5BF00459E77 /* PNGenericChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGenericChart.h; sourceTree = "<group>"; };
+		3EDEE1DB1B6AF5BF00459E77 /* PNGenericChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNGenericChart.m; sourceTree = "<group>"; };
+		3EDEE1DC1B6AF5BF00459E77 /* PNLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNLineChart.h; sourceTree = "<group>"; };
+		3EDEE1DD1B6AF5BF00459E77 /* PNLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNLineChart.m; sourceTree = "<group>"; };
+		3EDEE1DE1B6AF5BF00459E77 /* PNLineChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNLineChartData.h; sourceTree = "<group>"; };
+		3EDEE1DF1B6AF5BF00459E77 /* PNLineChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNLineChartData.m; sourceTree = "<group>"; };
+		3EDEE1E01B6AF5BF00459E77 /* PNLineChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNLineChartDataItem.h; sourceTree = "<group>"; };
+		3EDEE1E11B6AF5BF00459E77 /* PNLineChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNLineChartDataItem.m; sourceTree = "<group>"; };
+		3EDEE1E21B6AF5BF00459E77 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		3EDEE1E31B6AF5BF00459E77 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		3EDEE1E41B6AF5BF00459E77 /* PNScatterChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChart.m; sourceTree = "<group>"; };
+		3EDEE1E51B6AF5BF00459E77 /* PNScatterChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChartData.h; sourceTree = "<group>"; };
+		3EDEE1E61B6AF5BF00459E77 /* PNScatterChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartData.m; sourceTree = "<group>"; };
+		3EDEE1E71B6AF5BF00459E77 /* PNScatterChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChartDataItem.h; sourceTree = "<group>"; };
+		3EDEE1E81B6AF5BF00459E77 /* PNScatterChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNScatterChartDataItem.m; sourceTree = "<group>"; };
+		3EDEE1E91B6AF5BF00459E77 /* PNPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNPieChart.h; sourceTree = "<group>"; };
+		3EDEE1EA1B6AF5BF00459E77 /* PNPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNPieChart.m; sourceTree = "<group>"; };
+		3EDEE1EB1B6AF5BF00459E77 /* PNPieChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNPieChartDataItem.h; sourceTree = "<group>"; };
+		3EDEE1EC1B6AF5BF00459E77 /* PNPieChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNPieChartDataItem.m; sourceTree = "<group>"; };
+		3EDEE1ED1B6AF5BF00459E77 /* PNScatterChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNScatterChart.h; sourceTree = "<group>"; };
+		3EDEE1FE1B6AF62D00459E77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3EDEE2001B6AF63500459E77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3EDEE2021B6AF63D00459E77 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3EDEE2041B6AF64500459E77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3EDEE2061B6AF65000459E77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3EDEE20A1B6AF8CB00459E77 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EDEE1991B6AF4C900459E77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EDEE2091B6AF65E00459E77 /* CoreGraphics.framework in Frameworks */,
+				3EDEE2071B6AF65000459E77 /* UIKit.framework in Frameworks */,
+				3EDEE2051B6AF64500459E77 /* Foundation.framework in Frameworks */,
+				3EDEE2031B6AF63D00459E77 /* MapKit.framework in Frameworks */,
+				3EDEE2011B6AF63500459E77 /* CoreLocation.framework in Frameworks */,
+				3EDEE1FF1B6AF62D00459E77 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EDEE1B21B6AF4CA00459E77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EDEE1931B6AF4C900459E77 = {
+			isa = PBXGroup;
+			children = (
+				3EDEE19E1B6AF4C900459E77 /* EmpowerDemo */,
+				3EDEE1B81B6AF4CA00459E77 /* EmpowerDemoTests */,
+				3EDEE19D1B6AF4C900459E77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EDEE19D1B6AF4C900459E77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEE19C1B6AF4C900459E77 /* EmpowerDemo.app */,
+				3EDEE1B51B6AF4CA00459E77 /* EmpowerDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EDEE19E1B6AF4C900459E77 /* EmpowerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEE1A31B6AF4C900459E77 /* AppDelegate.h */,
+				3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */,
+				3EDEE1A61B6AF4C900459E77 /* BTGlassScrollViewController.h */,
+				3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */,
+				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
+				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
+				3EDEE1C51B6AF56700459E77 /* TrackingMapView.h */,
+				3EDEE1C61B6AF56700459E77 /* TrackingMapView.m */,
+				3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */,
+				3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */,
+				3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */,
+				3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */,
+				3EDEE1FD1B6AF5C700459E77 /* PNChart */,
+				3EDEE19F1B6AF4C900459E77 /* Supporting Files */,
+			);
+			path = EmpowerDemo;
+			sourceTree = "<group>";
+		};
+		3EDEE19F1B6AF4C900459E77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */,
+				3EDEE2061B6AF65000459E77 /* UIKit.framework */,
+				3EDEE2041B6AF64500459E77 /* Foundation.framework */,
+				3EDEE2021B6AF63D00459E77 /* MapKit.framework */,
+				3EDEE2001B6AF63500459E77 /* CoreLocation.framework */,
+				3EDEE1FE1B6AF62D00459E77 /* QuartzCore.framework */,
+				3EDEE1A01B6AF4C900459E77 /* Info.plist */,
+				3EDEE20A1B6AF8CB00459E77 /* arrow.png */,
+				3EDEE1A11B6AF4C900459E77 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EDEE1B81B6AF4CA00459E77 /* EmpowerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEE1BB1B6AF4CA00459E77 /* EmpowerDemoTests.m */,
+				3EDEE1B91B6AF4CA00459E77 /* Supporting Files */,
+			);
+			path = EmpowerDemoTests;
+			sourceTree = "<group>";
+		};
+		3EDEE1B91B6AF4CA00459E77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EDEE1FD1B6AF5C700459E77 /* PNChart */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEE1CE1B6AF5BF00459E77 /* PNBar.h */,
+				3EDEE1CF1B6AF5BF00459E77 /* PNBar.m */,
+				3EDEE1D01B6AF5BF00459E77 /* PNBarChart.h */,
+				3EDEE1D11B6AF5BF00459E77 /* PNBarChart.m */,
+				3EDEE1D21B6AF5BF00459E77 /* PNChart.h */,
+				3EDEE1D31B6AF5BF00459E77 /* PNChartDelegate.h */,
+				3EDEE1D41B6AF5BF00459E77 /* PNChartLabel.h */,
+				3EDEE1D51B6AF5BF00459E77 /* PNChartLabel.m */,
+				3EDEE1D61B6AF5BF00459E77 /* PNCircleChart.h */,
+				3EDEE1D71B6AF5BF00459E77 /* PNCircleChart.m */,
+				3EDEE1D81B6AF5BF00459E77 /* PNColor.h */,
+				3EDEE1D91B6AF5BF00459E77 /* PNColor.m */,
+				3EDEE1DA1B6AF5BF00459E77 /* PNGenericChart.h */,
+				3EDEE1DB1B6AF5BF00459E77 /* PNGenericChart.m */,
+				3EDEE1DC1B6AF5BF00459E77 /* PNLineChart.h */,
+				3EDEE1DD1B6AF5BF00459E77 /* PNLineChart.m */,
+				3EDEE1DE1B6AF5BF00459E77 /* PNLineChartData.h */,
+				3EDEE1DF1B6AF5BF00459E77 /* PNLineChartData.m */,
+				3EDEE1E01B6AF5BF00459E77 /* PNLineChartDataItem.h */,
+				3EDEE1E11B6AF5BF00459E77 /* PNLineChartDataItem.m */,
+				3EDEE1E21B6AF5BF00459E77 /* UICountingLabel.h */,
+				3EDEE1E31B6AF5BF00459E77 /* UICountingLabel.m */,
+				3EDEE1E41B6AF5BF00459E77 /* PNScatterChart.m */,
+				3EDEE1E51B6AF5BF00459E77 /* PNScatterChartData.h */,
+				3EDEE1E61B6AF5BF00459E77 /* PNScatterChartData.m */,
+				3EDEE1E71B6AF5BF00459E77 /* PNScatterChartDataItem.h */,
+				3EDEE1E81B6AF5BF00459E77 /* PNScatterChartDataItem.m */,
+				3EDEE1E91B6AF5BF00459E77 /* PNPieChart.h */,
+				3EDEE1EA1B6AF5BF00459E77 /* PNPieChart.m */,
+				3EDEE1EB1B6AF5BF00459E77 /* PNPieChartDataItem.h */,
+				3EDEE1EC1B6AF5BF00459E77 /* PNPieChartDataItem.m */,
+				3EDEE1ED1B6AF5BF00459E77 /* PNScatterChart.h */,
+			);
+			name = PNChart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EDEE19B1B6AF4C900459E77 /* EmpowerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EDEE1BF1B6AF4CA00459E77 /* Build configuration list for PBXNativeTarget "EmpowerDemo" */;
+			buildPhases = (
+				3EDEE1981B6AF4C900459E77 /* Sources */,
+				3EDEE1991B6AF4C900459E77 /* Frameworks */,
+				3EDEE19A1B6AF4C900459E77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmpowerDemo;
+			productName = EmpowerDemo;
+			productReference = 3EDEE19C1B6AF4C900459E77 /* EmpowerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EDEE1B41B6AF4CA00459E77 /* EmpowerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EDEE1C21B6AF4CA00459E77 /* Build configuration list for PBXNativeTarget "EmpowerDemoTests" */;
+			buildPhases = (
+				3EDEE1B11B6AF4CA00459E77 /* Sources */,
+				3EDEE1B21B6AF4CA00459E77 /* Frameworks */,
+				3EDEE1B31B6AF4CA00459E77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EDEE1B71B6AF4CA00459E77 /* PBXTargetDependency */,
+			);
+			name = EmpowerDemoTests;
+			productName = EmpowerDemoTests;
+			productReference = 3EDEE1B51B6AF4CA00459E77 /* EmpowerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EDEE1941B6AF4C900459E77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = empower;
+				TargetAttributes = {
+					3EDEE19B1B6AF4C900459E77 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					3EDEE1B41B6AF4CA00459E77 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 3EDEE19B1B6AF4C900459E77;
+					};
+				};
+			};
+			buildConfigurationList = 3EDEE1971B6AF4C900459E77 /* Build configuration list for PBXProject "EmpowerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EDEE1931B6AF4C900459E77;
+			productRefGroup = 3EDEE19D1B6AF4C900459E77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EDEE19B1B6AF4C900459E77 /* EmpowerDemo */,
+				3EDEE1B41B6AF4CA00459E77 /* EmpowerDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EDEE19A1B6AF4C900459E77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */,
+				3EDEE20B1B6AF8CB00459E77 /* arrow.png in Resources */,
+				3EDEE1AD1B6AF4C900459E77 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EDEE1B31B6AF4CA00459E77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EDEE1981B6AF4C900459E77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */,
+				3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */,
+				3EDEE1C71B6AF56700459E77 /* TrackingMapView.m in Sources */,
+				3EDEE1CC1B6AF59800459E77 /* BTGlassScrollView.m in Sources */,
+				3EDEE1F41B6AF5BF00459E77 /* PNLineChart.m in Sources */,
+				3EDEE1EE1B6AF5BF00459E77 /* PNBar.m in Sources */,
+				3EDEE1F01B6AF5BF00459E77 /* PNChartLabel.m in Sources */,
+				3EDEE1F91B6AF5BF00459E77 /* PNScatterChartData.m in Sources */,
+				3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */,
+				3EDEE1FB1B6AF5BF00459E77 /* PNPieChart.m in Sources */,
+				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,
+				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
+				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
+				3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */,
+				3EDEE1F31B6AF5BF00459E77 /* PNGenericChart.m in Sources */,
+				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
+				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,
+				3EDEE1F81B6AF5BF00459E77 /* PNScatterChart.m in Sources */,
+				3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */,
+				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
+				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EDEE1B11B6AF4CA00459E77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EDEE1BC1B6AF4CA00459E77 /* EmpowerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EDEE1B71B6AF4CA00459E77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EDEE19B1B6AF4C900459E77 /* EmpowerDemo */;
+			targetProxy = 3EDEE1B61B6AF4CA00459E77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EDEE1AF1B6AF4C900459E77 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EDEE1BD1B6AF4CA00459E77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3EDEE1BE1B6AF4CA00459E77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EDEE1C01B6AF4CA00459E77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmpowerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3EDEE1C11B6AF4CA00459E77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = EmpowerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3EDEE1C31B6AF4CA00459E77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmpowerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmpowerDemo.app/EmpowerDemo";
+			};
+			name = Debug;
+		};
+		3EDEE1C41B6AF4CA00459E77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EmpowerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmpowerDemo.app/EmpowerDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EDEE1971B6AF4C900459E77 /* Build configuration list for PBXProject "EmpowerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EDEE1BD1B6AF4CA00459E77 /* Debug */,
+				3EDEE1BE1B6AF4CA00459E77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EDEE1BF1B6AF4CA00459E77 /* Build configuration list for PBXNativeTarget "EmpowerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EDEE1C01B6AF4CA00459E77 /* Debug */,
+				3EDEE1C11B6AF4CA00459E77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3EDEE1C21B6AF4CA00459E77 /* Build configuration list for PBXNativeTarget "EmpowerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EDEE1C31B6AF4CA00459E77 /* Debug */,
+				3EDEE1C41B6AF4CA00459E77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EDEE1941B6AF4C900459E77 /* Project object */;
+}
