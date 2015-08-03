@@ -2,6 +2,7 @@
 // A view that displays lines connecting coordinates on a MKMapView.
 #import "TrackingMapView.h"
 #import <MapKit/MKMapView.h>
+
 static const int ARROW_THRESHOLD = 100;
 
 @implementation TrackingMapView
@@ -18,7 +19,6 @@ static const int ARROW_THRESHOLD = 100;
     
     return self; // return this TrackingMapView
 } // end method initWithFrame:
-
 // called automatically when the view needs to be displayed
 // this is where we do all of our drawing
 - (void)drawRect:(CGRect)rect

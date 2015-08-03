@@ -7,24 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CustomView;
 #import "BTGlassScrollView.h"
 #import <MapKit/MapKit.h>
 #import "CoreLocation/CoreLocation.h"
-#import "TrackingMapView.h"
 
 
 @interface BTGlassScrollViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>
 {
     
-    TrackingMapView *trackingMapView; // View displaying the map and route
     MKMapView *mapView; // represents the map
     CLLocationManager *locationManager; // provides location information
-    BOOL tracking; // is the app tracking?
     float distance; // the distance traveled by the user
     NSDate *startDate; // stores the time when tracking began
     CLHeading *heading; // the compass heading of the iPhone
-    CustomView *customView;
 }
 // declare our outlets as properties
 @property (nonatomic,retain) MKMapView *mapView;

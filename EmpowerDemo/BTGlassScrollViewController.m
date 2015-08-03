@@ -6,22 +6,27 @@
 //  Copyright (c) 2015 empower. All rights reserved.
 //
 
-
+#import <MapKit/MapKit.h>
 #import "BTGlassScrollViewController.h"
 @import CoreLocation;
 #define Duration 0.2
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #import "PNChart.h"
+#import "CrumbPath.h"
+#import "CrumbPathRenderer.h"
 
 
 
-@interface BTGlassScrollViewController()<CLLocationManagerDelegate>
+@interface BTGlassScrollViewController()<MKMapViewDelegate,CLLocationManagerDelegate>
 {
     BOOL contain;
     CGPoint startPoint;
     CGPoint originPoint;
     
 }
+@property (nonatomic, strong) CrumbPath *crumbs;
+@property (nonatomic, strong) CrumbPathRenderer *crumbPathRenderer;
+@property (nonatomic, strong) MKPolygonRenderer *drawingAreaRenderer;   // shown if kDebugShowArea is set to 1
 @property (strong , nonatomic) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSTimer *myTimer;
 @end
@@ -75,72 +80,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     self.view.backgroundColor = [UIColor blackColor];
-    tracking = YES;
+    mapView.delegate =self;
     
 }
-
-//- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-//    NSLog(@"Callback");
-//    if (status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse) {
-//        NSLog(@"Authorized");
-//        tracking = YES;
-//
-//    } else if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
-//        NSLog(@"Denied");
-//        [locationManager stopUpdatingLocation];
-//          NSLog(tracking ? @"Yes" : @"No");
-//
-//    }
-//}
-// called when the user in different view.
-- (void)toggleTracking
-{
-    //    // if the app is currently tracking
-    //    if (tracking)
-    //    {
-    //        tracking = NO; // stop tracking
-    //
-    //        // allow the iPhone to go to sleep
-    //        [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
-    //        [locationManager stopUpdatingLocation]; // stop tracking location
-    //        [locationManager stopUpdatingHeading]; // stop tracking heading
-    //        mapView.scrollEnabled = YES; // allow the user to scroll the map
-    //        mapView.zoomEnabled = YES; // allow the user to zoom the map
-    //
-    //        // get the time elapsed since the tracking started
-    //        float time = -[startDate timeIntervalSinceNow];
-    //
-    //        // format the ending message with various calculations
-    //        NSString *message = [NSString stringWithFormat:
-    //                             @"Distance: %.02f km, %.02f mi\nSpeed: %.02f km/h, %.02f mph",
-    //                             distance / 1000, distance * 0.00062, distance * 3.6 / time,
-    //                             distance * 2.2369 / time];
-    //
-    //        // create an alert that shows the message
-    //        UIAlertView *alert = [[UIAlertView alloc]
-    //                              initWithTitle:@"Statistics" message:message delegate:self
-    //                              cancelButtonTitle:@"Return" otherButtonTitles:nil];
-    //        [alert show]; // show the alert
-    //         } // end if
-    //    else // start tracking
-    //    {
-    tracking = YES; // start tracking
-    mapView.scrollEnabled = NO; // prevent map scrolling by user
-    mapView.zoomEnabled = NO; // prevent map zooming by user
-    
-    
-    // keep the iPhone from going to sleep
-    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-    distance = 0.0; // reset the distance
-    //        [locationManager startUpdatingLocation]; // start tracking location
-    [locationManager startUpdatingHeading]; // start tracking heading
-    //        NSLog(@"%f",distance);
-    // end else
-} // end method toggleTracking
-
 
 // delegate method for the MKMapView
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:
@@ -149,42 +93,91 @@
     return nil; // we don't want any annotations
 } // end method mapView:viewForAnnotation:
 
+
 // called whenever the location manager updates the current location
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    CLLocation *newLocation = [locations lastObject];
-    CLLocation *oldLocation = [locations objectAtIndex:locations.count-1];
-    // add the new location to the map
-    [trackingMapView addPoint:newLocation];
-    // if there was a previous location
-    if (oldLocation != nil)
+    if (locations != nil && locations.count > 0)
     {
-        // add distance from the old location to the total distance
-        distance += [newLocation getDistanceFrom:oldLocation];
+        
+        // we are not using deferred location updates, so always use the latest location
+        CLLocation *newLocation = locations[0];
+        
+        if (self.crumbs == nil)
+        {
+            // This is the first time we're getting a location update, so create
+            // the CrumbPath and add it to the map.
+            //
+            _crumbs = [[CrumbPath alloc] initWithCenterCoordinate:newLocation.coordinate];
+            [self.mapView addOverlay:self.crumbs level:MKOverlayLevelAboveRoads];
+            
+            
+            // default -boundingMapRect size is 1km^2 centered on coord
+            
+            
+            // create a region centered around the new point
+            MKCoordinateSpan span = MKCoordinateSpanMake(0.005, 0.005);
+            // create a new MKCoordinateRegion centered around the new location
+            MKCoordinateRegion region =
+            MKCoordinateRegionMake(newLocation.coordinate, span);
+            
+            [self.mapView setRegion:region animated:YES];
+        }
+        else
+        {
+            // This is a subsequent location update.
+            //
+            // If the crumbs MKOverlay model object determines that the current location has moved
+            // far enough from the previous location, use the returned updateRect to redraw just
+            // the changed area.
+            //
+            // note: cell-based devices will locate you using the triangulation of the cell towers.
+            // so you may experience spikes in location data (in small time intervals)
+            // due to cell tower triangulation.
+            //
+            BOOL boundingMapRectChanged = NO;
+            MKMapRect updateRect = [self.crumbs addCoordinate:newLocation.coordinate boundingMapRectChanged:&boundingMapRectChanged];
+            if (boundingMapRectChanged)
+            {
+                // MKMapView expects an overlay's boundingMapRect to never change (it's a readonly @property).
+                // So for the MapView to recognize the overlay's size has changed, we remove it, then add it again.
+                [self.mapView removeOverlays:self.mapView.overlays];
+                _crumbPathRenderer = nil;
+                [self.mapView addOverlay:self.crumbs level:MKOverlayLevelAboveRoads];
+                
+                MKMapRect r = self.crumbs.boundingMapRect;
+                MKMapPoint pts[] = {
+                    MKMapPointMake(MKMapRectGetMinX(r), MKMapRectGetMinY(r)),
+                    MKMapPointMake(MKMapRectGetMinX(r), MKMapRectGetMaxY(r)),
+                    MKMapPointMake(MKMapRectGetMaxX(r), MKMapRectGetMaxY(r)),
+                    MKMapPointMake(MKMapRectGetMaxX(r), MKMapRectGetMinY(r)),
+                };
+                NSUInteger count = sizeof(pts) / sizeof(pts[0]);
+                MKPolygon *boundingMapRectOverlay = [MKPolygon polygonWithPoints:pts count:count];
+                [self.mapView addOverlay:boundingMapRectOverlay level:MKOverlayLevelAboveRoads];
+            }
+            else if (!MKMapRectIsNull(updateRect))
+            {
+                // There is a non null update rect.
+                // Compute the currently visible map zoom scale
+                MKZoomScale currentZoomScale = (CGFloat)(self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width);
+                // Find out the line width at this zoom scale and outset the updateRect by that amount
+                CGFloat lineWidth = MKRoadWidthAtZoomScale(currentZoomScale);
+                updateRect = MKMapRectInset(updateRect, -lineWidth, -lineWidth);
+                // Ask the overlay view to update just the changed area.
+                MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+                region.center.latitude = self.locationManager.location.coordinate.latitude;
+                region.center.longitude = self.locationManager.location.coordinate.longitude;
+                region.span.longitudeDelta = 0.005f;
+                region.span.longitudeDelta = 0.005f;
+                [mapView setRegion:region animated:YES];
+
+                [self.crumbPathRenderer setNeedsDisplayInMapRect:updateRect];
+            }
+        }
     }
-    // create a region centered around the new point
-    MKCoordinateSpan span = MKCoordinateSpanMake(0.005, 0.005);
-    // create a new MKCoordinateRegion centered around the new location
-    MKCoordinateRegion region =
-    MKCoordinateRegionMake(newLocation.coordinate, span);
-    
-    // reposition the map to show the new point
-    [mapView setRegion:region animated:YES];
+
 } // end method locationManager:didUpdateToLocation:fromLocation
 
-// called when the location manager updates the heading
-- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:
-(CLHeading *)newHeading
-{
-    // calculate the rotation in radians
-    float rotation = newHeading.trueHeading * M_PI / 180;
-    
-    // reset the transform
-    mapView.transform = CGAffineTransformIdentity;
-    
-    // create a new transform with the angle
-    CGAffineTransform transform = CGAffineTransformMakeRotation(-rotation);
-    mapView.transform = transform; // apply the new transform
-} // end method locationManager:didUpdateHeading:
 
 // Write an error to console if the CLLocationManager fails
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:
@@ -210,10 +203,9 @@
     [view addSubview:label];
     CGRect rect = CGRectMake(0, 0, 310, 280);
     mapView = [[MKMapView alloc] initWithFrame:rect];
-    //    mapView.delegate = self;
+    mapView.delegate = self;
     self.locationManager = [[CLLocationManager alloc] init];
     locationManager.pausesLocationUpdatesAutomatically = NO;
-    // set locationManager's delegate to self
     locationManager.delegate = self;
     // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
@@ -221,24 +213,10 @@
         [self.locationManager requestWhenInUseAuthorization];
     }
     
-    //    else{
-    //        [self.locationManager startUpdatingLocation];
-    //    }
-    
-    
     mapView.showsUserLocation = YES;
     [mapView setMapType:MKMapTypeStandard];
     [mapView setZoomEnabled:YES];
     [mapView setScrollEnabled:YES];
-    
-    trackingMapView =
-    [[TrackingMapView alloc] initWithFrame:mapView.frame];
-    
-    // add the trackingMapView subview to mapView
-    [mapView addSubview:trackingMapView];
-    
-    // set trackingMapView as mapView's delegate
-    mapView.delegate = trackingMapView;
     
     self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     self.locationManager.distanceFilter= 10.0;
@@ -322,6 +300,39 @@
     }
 }
 
+#pragma mark - MapKit
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
+{
+    MKOverlayRenderer *renderer = nil;
+    
+    if ([overlay isKindOfClass:[CrumbPath class]])
+    {
+        if (self.crumbPathRenderer == nil)
+        {
+            _crumbPathRenderer = [[CrumbPathRenderer alloc] initWithOverlay:overlay];
+        }
+        renderer = self.crumbPathRenderer;
+    }
+    else if ([overlay isKindOfClass:[MKPolygon class]])
+    {
+#if kDebugShowArea
+        if (![self.drawingAreaRenderer.polygon isEqual:overlay])
+        {
+            _drawingAreaRenderer = [[MKPolygonRenderer alloc] initWithPolygon:overlay];
+            self.drawingAreaRenderer.fillColor = [[UIColor blueColor] colorWithAlphaComponent:0.25];
+        }
+        renderer = self.drawingAreaRenderer;
+#endif
+    }
+    
+    return renderer;
+}
+
+
+#pragma mark - Audio Support
+
+
 - (void)buttonLongPressed:(UILongPressGestureRecognizer *)sender
 {
     
@@ -402,12 +413,6 @@
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     //View Area
-    MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
-    region.center.latitude = self.locationManager.location.coordinate.latitude;
-    region.center.longitude = self.locationManager.location.coordinate.longitude;
-    region.span.longitudeDelta = 0.005f;
-    region.span.longitudeDelta = 0.005f;
-    [mapView setRegion:region animated:YES];
     
 }
 

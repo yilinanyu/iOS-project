@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1246D41B6F760000DCBAC6 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D11B6F760000DCBAC6 /* CrumbPath.m */; };
+		3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */; };
 		3EDEE1A21B6AF4C900459E77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A11B6AF4C900459E77 /* main.m */; };
 		3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */; };
 		3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */; };
 		3EDEE1AD1B6AF4C900459E77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */; };
 		3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */; };
 		3EDEE1BC1B6AF4CA00459E77 /* EmpowerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1BB1B6AF4CA00459E77 /* EmpowerDemoTests.m */; };
-		3EDEE1C71B6AF56700459E77 /* TrackingMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1C61B6AF56700459E77 /* TrackingMapView.m */; };
 		3EDEE1CC1B6AF59800459E77 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */; };
 		3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */; };
 		3EDEE1EE1B6AF5BF00459E77 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1CF1B6AF5BF00459E77 /* PNBar.m */; };
@@ -51,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E1246D01B6F760000DCBAC6 /* CrumbPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPath.h; sourceTree = "<group>"; };
+		3E1246D11B6F760000DCBAC6 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
+		3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathRenderer.h; sourceTree = "<group>"; };
+		3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathRenderer.m; sourceTree = "<group>"; };
 		3EDEE19C1B6AF4C900459E77 /* EmpowerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpowerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDEE1A01B6AF4C900459E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDEE1A11B6AF4C900459E77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,8 +67,6 @@
 		3EDEE1AF1B6AF4C900459E77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3EDEE1B51B6AF4CA00459E77 /* EmpowerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpowerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDEE1BB1B6AF4CA00459E77 /* EmpowerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmpowerDemoTests.m; sourceTree = "<group>"; };
-		3EDEE1C51B6AF56700459E77 /* TrackingMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingMapView.h; sourceTree = "<group>"; };
-		3EDEE1C61B6AF56700459E77 /* TrackingMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingMapView.m; sourceTree = "<group>"; };
 		3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
 		3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
 		3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -133,6 +136,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E1246D61B6F760E00DCBAC6 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				3E1246D01B6F760000DCBAC6 /* CrumbPath.h */,
+				3E1246D11B6F760000DCBAC6 /* CrumbPath.m */,
+				3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */,
+				3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
 		3EDEE1931B6AF4C900459E77 = {
 			isa = PBXGroup;
 			children = (
@@ -160,12 +174,11 @@
 				3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
 				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
-				3EDEE1C51B6AF56700459E77 /* TrackingMapView.h */,
-				3EDEE1C61B6AF56700459E77 /* TrackingMapView.m */,
 				3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */,
 				3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */,
 				3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */,
 				3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */,
+				3E1246D61B6F760E00DCBAC6 /* Overlay */,
 				3EDEE1FD1B6AF5C700459E77 /* PNChart */,
 				3EDEE19F1B6AF4C900459E77 /* Supporting Files */,
 			);
@@ -345,10 +358,10 @@
 			files = (
 				3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */,
 				3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */,
-				3EDEE1C71B6AF56700459E77 /* TrackingMapView.m in Sources */,
 				3EDEE1CC1B6AF59800459E77 /* BTGlassScrollView.m in Sources */,
 				3EDEE1F41B6AF5BF00459E77 /* PNLineChart.m in Sources */,
 				3EDEE1EE1B6AF5BF00459E77 /* PNBar.m in Sources */,
+				3E1246D41B6F760000DCBAC6 /* CrumbPath.m in Sources */,
 				3EDEE1F01B6AF5BF00459E77 /* PNChartLabel.m in Sources */,
 				3EDEE1F91B6AF5BF00459E77 /* PNScatterChartData.m in Sources */,
 				3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */,
@@ -358,6 +371,7 @@
 				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
 				3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */,
 				3EDEE1F31B6AF5BF00459E77 /* PNGenericChart.m in Sources */,
+				3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */,
 				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
 				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,
 				3EDEE1F81B6AF5BF00459E77 /* PNScatterChart.m in Sources */,
@@ -550,6 +564,7 @@
 				3EDEE1C11B6AF4CA00459E77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EDEE1C21B6AF4CA00459E77 /* Build configuration list for PBXNativeTarget "EmpowerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +573,7 @@
 				3EDEE1C41B6AF4CA00459E77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
