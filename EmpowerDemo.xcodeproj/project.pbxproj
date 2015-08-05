@@ -38,7 +38,28 @@
 		3EDEE2051B6AF64500459E77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2041B6AF64500459E77 /* Foundation.framework */; };
 		3EDEE2071B6AF65000459E77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2061B6AF65000459E77 /* UIKit.framework */; };
 		3EDEE2091B6AF65E00459E77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */; };
-		3EDEE20B1B6AF8CB00459E77 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDEE20A1B6AF8CB00459E77 /* arrow.png */; };
+		3EFBC5881B7182410072F774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5871B7182410072F774 /* Main.storyboard */; };
+		3EFBC58B1B71841D0072F774 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC58A1B71841D0072F774 /* MenuViewController.m */; };
+		3EFBC5951B718E690072F774 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC58D1B718E690072F774 /* MMDrawerBarButtonItem.m */; };
+		3EFBC5961B718E690072F774 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC58F1B718E690072F774 /* MMDrawerController.m */; };
+		3EFBC5971B718E690072F774 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC5921B718E690072F774 /* MMDrawerVisualState.m */; };
+		3EFBC5981B718E690072F774 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC5941B718E690072F774 /* UIViewController+MMDrawerController.m */; };
+		3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5991B71C3390072F774 /* menuButton.png */; };
+		3EFBC59C1B71C3390072F774 /* menuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC59A1B71C3390072F774 /* menuButton@2x.png */; };
+		3EFBC5A81B71CC870072F774 /* Apache License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC59D1B71CC860072F774 /* Apache License.txt */; };
+		3EFBC5A91B71CC870072F774 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC59E1B71CC860072F774 /* OpenSans-Bold.ttf */; };
+		3EFBC5AA1B71CC870072F774 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC59F1B71CC870072F774 /* OpenSans-BoldItalic.ttf */; };
+		3EFBC5AB1B71CC870072F774 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A01B71CC870072F774 /* OpenSans-ExtraBold.ttf */; };
+		3EFBC5AC1B71CC870072F774 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A11B71CC870072F774 /* OpenSans-ExtraBoldItalic.ttf */; };
+		3EFBC5AD1B71CC870072F774 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A21B71CC870072F774 /* OpenSans-Italic.ttf */; };
+		3EFBC5AE1B71CC870072F774 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A31B71CC870072F774 /* OpenSans-Light.ttf */; };
+		3EFBC5AF1B71CC870072F774 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A41B71CC870072F774 /* OpenSans-LightItalic.ttf */; };
+		3EFBC5B01B71CC870072F774 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A51B71CC870072F774 /* OpenSans-Regular.ttf */; };
+		3EFBC5B11B71CC870072F774 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A61B71CC870072F774 /* OpenSans-Semibold.ttf */; };
+		3EFBC5B21B71CC870072F774 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5A71B71CC870072F774 /* OpenSans-SemiboldItalic.ttf */; };
+		3EFBC5B71B71F03B0072F774 /* emPowerBolt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */; };
+		3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */; };
+		3EFBC5B91B71F03B0072F774 /* emPowerBolt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +130,34 @@
 		3EDEE2041B6AF64500459E77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3EDEE2061B6AF65000459E77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3EDEE20A1B6AF8CB00459E77 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		3EFBC5871B7182410072F774 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3EFBC5891B71841D0072F774 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		3EFBC58A1B71841D0072F774 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		3EFBC58C1B718E690072F774 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		3EFBC58D1B718E690072F774 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		3EFBC58E1B718E690072F774 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		3EFBC58F1B718E690072F774 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		3EFBC5901B718E690072F774 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		3EFBC5911B718E690072F774 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		3EFBC5921B718E690072F774 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		3EFBC5931B718E690072F774 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		3EFBC5941B718E690072F774 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		3EFBC5991B71C3390072F774 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		3EFBC59A1B71C3390072F774 /* menuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuButton@2x.png"; sourceTree = "<group>"; };
+		3EFBC59D1B71CC860072F774 /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
+		3EFBC59E1B71CC860072F774 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		3EFBC59F1B71CC870072F774 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3EFBC5A01B71CC870072F774 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3EFBC5A11B71CC870072F774 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		3EFBC5A21B71CC870072F774 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		3EFBC5A31B71CC870072F774 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		3EFBC5A41B71CC870072F774 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		3EFBC5A51B71CC870072F774 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		3EFBC5A61B71CC870072F774 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		3EFBC5A71B71CC870072F774 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emPowerBolt.png; sourceTree = "<group>"; };
+		3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emPowerBolt@2x.png"; sourceTree = "<group>"; };
+		3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emPowerBolt@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +187,9 @@
 		3E1246D61B6F760E00DCBAC6 /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
+				3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */,
+				3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */,
+				3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */,
 				3E1246D01B6F760000DCBAC6 /* CrumbPath.h */,
 				3E1246D11B6F760000DCBAC6 /* CrumbPath.m */,
 				3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */,
@@ -178,6 +229,19 @@
 				3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */,
 				3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */,
 				3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */,
+				3EFBC5871B7182410072F774 /* Main.storyboard */,
+				3EFBC5891B71841D0072F774 /* MenuViewController.h */,
+				3EFBC58A1B71841D0072F774 /* MenuViewController.m */,
+				3EFBC58C1B718E690072F774 /* MMDrawerBarButtonItem.h */,
+				3EFBC58D1B718E690072F774 /* MMDrawerBarButtonItem.m */,
+				3EFBC58E1B718E690072F774 /* MMDrawerController.h */,
+				3EFBC58F1B718E690072F774 /* MMDrawerController.m */,
+				3EFBC5901B718E690072F774 /* MMDrawerController+Subclass.h */,
+				3EFBC5911B718E690072F774 /* MMDrawerVisualState.h */,
+				3EFBC5921B718E690072F774 /* MMDrawerVisualState.m */,
+				3EFBC5931B718E690072F774 /* UIViewController+MMDrawerController.h */,
+				3EFBC5941B718E690072F774 /* UIViewController+MMDrawerController.m */,
+				3EFBC5B31B71CC8F0072F774 /* Fonts */,
 				3E1246D61B6F760E00DCBAC6 /* Overlay */,
 				3EDEE1FD1B6AF5C700459E77 /* PNChart */,
 				3EDEE19F1B6AF4C900459E77 /* Supporting Files */,
@@ -188,6 +252,8 @@
 		3EDEE19F1B6AF4C900459E77 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3EFBC5991B71C3390072F774 /* menuButton.png */,
+				3EFBC59A1B71C3390072F774 /* menuButton@2x.png */,
 				3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */,
 				3EDEE2061B6AF65000459E77 /* UIKit.framework */,
 				3EDEE2041B6AF64500459E77 /* Foundation.framework */,
@@ -195,8 +261,8 @@
 				3EDEE2001B6AF63500459E77 /* CoreLocation.framework */,
 				3EDEE1FE1B6AF62D00459E77 /* QuartzCore.framework */,
 				3EDEE1A01B6AF4C900459E77 /* Info.plist */,
-				3EDEE20A1B6AF8CB00459E77 /* arrow.png */,
 				3EDEE1A11B6AF4C900459E77 /* main.m */,
+				3EFBC59D1B71CC860072F774 /* Apache License.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -254,6 +320,23 @@
 				3EDEE1ED1B6AF5BF00459E77 /* PNScatterChart.h */,
 			);
 			name = PNChart;
+			sourceTree = "<group>";
+		};
+		3EFBC5B31B71CC8F0072F774 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3EFBC59E1B71CC860072F774 /* OpenSans-Bold.ttf */,
+				3EFBC59F1B71CC870072F774 /* OpenSans-BoldItalic.ttf */,
+				3EFBC5A01B71CC870072F774 /* OpenSans-ExtraBold.ttf */,
+				3EFBC5A11B71CC870072F774 /* OpenSans-ExtraBoldItalic.ttf */,
+				3EFBC5A21B71CC870072F774 /* OpenSans-Italic.ttf */,
+				3EFBC5A31B71CC870072F774 /* OpenSans-Light.ttf */,
+				3EFBC5A41B71CC870072F774 /* OpenSans-LightItalic.ttf */,
+				3EFBC5A51B71CC870072F774 /* OpenSans-Regular.ttf */,
+				3EFBC5A61B71CC870072F774 /* OpenSans-Semibold.ttf */,
+				3EFBC5A71B71CC870072F774 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,9 +419,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EFBC5B71B71F03B0072F774 /* emPowerBolt.png in Resources */,
+				3EFBC5AE1B71CC870072F774 /* OpenSans-Light.ttf in Resources */,
 				3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */,
-				3EDEE20B1B6AF8CB00459E77 /* arrow.png in Resources */,
+				3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */,
+				3EFBC5AF1B71CC870072F774 /* OpenSans-LightItalic.ttf in Resources */,
+				3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */,
+				3EFBC5B11B71CC870072F774 /* OpenSans-Semibold.ttf in Resources */,
+				3EFBC5B21B71CC870072F774 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				3EFBC5A91B71CC870072F774 /* OpenSans-Bold.ttf in Resources */,
+				3EFBC5A81B71CC870072F774 /* Apache License.txt in Resources */,
+				3EFBC59C1B71C3390072F774 /* menuButton@2x.png in Resources */,
+				3EFBC5B91B71F03B0072F774 /* emPowerBolt@3x.png in Resources */,
+				3EFBC5AA1B71CC870072F774 /* OpenSans-BoldItalic.ttf in Resources */,
 				3EDEE1AD1B6AF4C900459E77 /* Images.xcassets in Resources */,
+				3EFBC5B01B71CC870072F774 /* OpenSans-Regular.ttf in Resources */,
+				3EFBC5881B7182410072F774 /* Main.storyboard in Resources */,
+				3EFBC5AD1B71CC870072F774 /* OpenSans-Italic.ttf in Resources */,
+				3EFBC5AC1B71CC870072F774 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				3EFBC5AB1B71CC870072F774 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */,
+				3EFBC5951B718E690072F774 /* MMDrawerBarButtonItem.m in Sources */,
 				3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */,
 				3EDEE1CC1B6AF59800459E77 /* BTGlassScrollView.m in Sources */,
 				3EDEE1F41B6AF5BF00459E77 /* PNLineChart.m in Sources */,
@@ -369,8 +469,11 @@
 				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,
 				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
 				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
+				3EFBC5971B718E690072F774 /* MMDrawerVisualState.m in Sources */,
+				3EFBC5981B718E690072F774 /* UIViewController+MMDrawerController.m in Sources */,
 				3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */,
 				3EDEE1F31B6AF5BF00459E77 /* PNGenericChart.m in Sources */,
+				3EFBC5961B718E690072F774 /* MMDrawerController.m in Sources */,
 				3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */,
 				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
 				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,
@@ -378,6 +481,7 @@
 				3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */,
 				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
 				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,
+				3EFBC58B1B71841D0072F774 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@
 #import "PNChart.h"
 #import "CrumbPath.h"
 #import "CrumbPathRenderer.h"
+#import "AppDelegate.h"
 
 
 
@@ -49,7 +50,11 @@
 {
     self = [super init];
     if (self) {
+        
+   
         _glassScrollView = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:image blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
+       
+
         [self.view addSubview:_glassScrollView];
         
         
@@ -80,9 +85,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    aButton.frame = CGRectMake(0,0,200,30);
+    UIImage *buttonImage = [UIImage imageNamed:@"menuButton.png"];
+    [aButton addTarget:self action:@selector(memuBarButtonItemPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [aButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [self.customView addSubview:aButton];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     self.view.backgroundColor = [UIColor blackColor];
     mapView.delegate =self;
+   
+    
+    UIImageView* logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+//    logoView.contentMode = UIViewContentModeScaleAspectFill;
+    UIImage *logoImage = [UIImage imageNamed:@"emPowerBolt.png"];
+    
+    UIImageView *logoImageView =[[UIImageView alloc] initWithFrame:CGRectMake(90,10,20,25 )];
+    [logoImageView setImage:logoImage];
+    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, 100,20)];
+    myLabel.text = @"emPower";
+    [myLabel setFont:[UIFont fontWithName:@"OpenSans-Bold" size:18]];
+    [myLabel setTextColor:[UIColor whiteColor]];
+    [logoView addSubview:myLabel];
+    [logoView addSubview:logoImageView];
+    
+     self.navigationItem.titleView = logoView;
+ 
     
 }
 
@@ -194,13 +222,21 @@
 - (UIView *)customView
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(80, -250, 310, 120)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(120, -250, 310, 120)];
     [label setText:[NSString stringWithFormat:@"%i",arc4random_uniform(20) + 60]];
     [label setTextColor:[UIColor whiteColor]];
-    [label setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:120]];
+    [label setFont:[UIFont fontWithName:@"OpenSans-Bold" size:70]];
     [label setShadowColor:[UIColor blackColor]];
     [label setShadowOffset:CGSizeMake(1, 1)];
     [view addSubview:label];
+    
+//    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    aButton.frame = CGRectMake(-60,-300,200,30);
+//    UIImage *buttonImage = [UIImage imageNamed:@"menuButton.png"];
+//    [aButton addTarget:self action:@selector(memuBarButtonItemPressed:) forControlEvents:UIControlEventTouchUpInside];
+//    [aButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+//    [view addSubview:aButton];
+    
     CGRect rect = CGRectMake(0, 0, 310, 280);
     mapView = [[MKMapView alloc] initWithFrame:rect];
     mapView.delegate = self;
@@ -328,9 +364,14 @@
     
     return renderer;
 }
+-(void)memuBarButtonItemPressed:(UIButton *) sender {
+    
+    NSLog(@"you clicked on button %@", sender.tag);
+  
+//    [[self drawControllerFromAppDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+//    
+}
 
-
-#pragma mark - Audio Support
 
 
 - (void)buttonLongPressed:(UILongPressGestureRecognizer *)sender
@@ -442,6 +483,14 @@
     // Dispose of any resources that can be recreated.
     
 }
+
+#pragma mark - DrawerController
+
+- (MMDrawerController *) drawControllerFromAppDelegate {
+    AppDelegate *appDelegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    return appDelegate.drawerController;
+}
+
 
 
 @end

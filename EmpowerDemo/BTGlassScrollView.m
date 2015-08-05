@@ -50,7 +50,7 @@
         [self createBackgroundView];
         [self createForegroundView];
         [self createTopShadow];
-        [self createBottomShadow];
+//        [self createBottomShadow];
     }
     return self;
 }
@@ -267,13 +267,13 @@
     _topShadowLayer = [self createTopMaskWithSize:CGSizeMake(_foregroundContainerView.frame.size.width, _foregroundScrollView.contentInset.top + DEFAULT_TOP_FADING_HEIGHT_HALF) startFadeAt:_foregroundScrollView.contentInset.top - DEFAULT_TOP_FADING_HEIGHT_HALF endAt:_foregroundScrollView.contentInset.top + DEFAULT_TOP_FADING_HEIGHT_HALF topColor:[UIColor colorWithWhite:0 alpha:.15] botColor:[UIColor colorWithWhite:0 alpha:0]];
     [self.layer insertSublayer:_topShadowLayer below:_foregroundContainerView.layer];
 }
-- (void)createBottomShadow
-{
-    [_botShadowLayer removeFromSuperlayer];
-    _botShadowLayer = [self createTopMaskWithSize:CGSizeMake(self.frame.size.width,_viewDistanceFromBottom) startFadeAt:0 endAt:_viewDistanceFromBottom topColor:[UIColor colorWithWhite:0 alpha:0] botColor:[UIColor colorWithWhite:0 alpha:.8]];
-    [_botShadowLayer setFrame:CGRectOffset(_botShadowLayer.bounds, 0, self.frame.size.height - _viewDistanceFromBottom)];
-    [self.layer insertSublayer:_botShadowLayer below:_foregroundContainerView.layer];
-}
+//- (void)createBottomShadow
+//{
+//    [_botShadowLayer removeFromSuperlayer];
+//    _botShadowLayer = [self createTopMaskWithSize:CGSizeMake(self.frame.size.width,_viewDistanceFromBottom) startFadeAt:0 endAt:_viewDistanceFromBottom topColor:[UIColor colorWithWhite:0 alpha:0] botColor:[UIColor colorWithWhite:0 alpha:.8]];
+//    [_botShadowLayer setFrame:CGRectOffset(_botShadowLayer.bounds, 0, self.frame.size.height - _viewDistanceFromBottom)];
+//    [self.layer insertSublayer:_botShadowLayer below:_foregroundContainerView.layer];
+//}
 
 
 #pragma mark - Button

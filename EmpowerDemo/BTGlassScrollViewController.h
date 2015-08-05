@@ -30,6 +30,5 @@
 @property(retain,nonatomic) UIView *view1;
 @property(nonatomic, retain) UILabel *label1;
 @property (nonatomic, strong) BTGlassScrollView *glassScrollView;
-
 - (id)initWithImage:(UIImage *)image;
 @end

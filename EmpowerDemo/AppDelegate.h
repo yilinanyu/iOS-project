@@ -9,13 +9,15 @@
 
 #import <UIKit/UIKit.h>
 #import "BTGlassScrollViewController.h"
-#import "TrackingMapView.h"
+#import "MMDrawerController.h"
 
-@interface AppDelegate : UIResponder <UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate>
 {
     CLLocation *locationManager;
 }
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) MMDrawerController *drawerController;
 
 @end
