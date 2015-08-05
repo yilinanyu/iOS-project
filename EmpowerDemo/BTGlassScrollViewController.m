@@ -85,19 +85,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    aButton.frame = CGRectMake(0,0,200,30);
-    UIImage *buttonImage = [UIImage imageNamed:@"menuButton.png"];
-    [aButton addTarget:self action:@selector(memuBarButtonItemPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [aButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-    [self.customView addSubview:aButton];
+    UIImage *image = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(memuBarButtonItemPressed:)];
+    self.navigationItem.leftBarButtonItem = aButton;
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     self.view.backgroundColor = [UIColor blackColor];
     mapView.delegate =self;
    
     
     UIImageView* logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
-//    logoView.contentMode = UIViewContentModeScaleAspectFill;
     UIImage *logoImage = [UIImage imageNamed:@"emPowerBolt.png"];
     
     UIImageView *logoImageView =[[UIImageView alloc] initWithFrame:CGRectMake(90,10,20,25 )];
@@ -110,6 +106,8 @@
     [logoView addSubview:logoImageView];
     
      self.navigationItem.titleView = logoView;
+    
+    
  
     
 }
