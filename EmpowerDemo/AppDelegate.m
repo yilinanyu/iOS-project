@@ -60,7 +60,7 @@
     
     UIPageViewController *pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:options];
     [pageViewController setViewControllers:_viewControllerArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-    [pageViewController.view setBackgroundColor:[UIColor blackColor]];
+    [pageViewController.view setBackgroundColor:[UIColor clearColor]];
     [pageViewController setDelegate:self];
     [pageViewController setDataSource:self];
     
@@ -196,7 +196,7 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: [self glassScrollViewControllerForIndex:index]];
     NSShadow *shadow = [[NSShadow alloc] init];
     [shadow setShadowOffset:CGSizeMake(1, 1)];
-    [shadow setShadowColor:[UIColor blackColor]];
+    [shadow setShadowColor:[UIColor clearColor]];
     [shadow setShadowBlurRadius:1];
     navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor], NSShadowAttributeName: shadow};
     

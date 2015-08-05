@@ -15,6 +15,7 @@
 #import "CrumbPath.h"
 #import "CrumbPathRenderer.h"
 #import "AppDelegate.h"
+#import "DetailViewController.h"
 
 
 
@@ -89,7 +90,7 @@
     UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(memuBarButtonItemPressed:)];
     self.navigationItem.leftBarButtonItem = aButton;
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor clearColor];
     mapView.delegate =self;
    
     
@@ -272,6 +273,11 @@
     label1 = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 120)];
     label1.textColor = [UIColor whiteColor];
     
+    // In some View controller
+    UITapGestureRecognizer *tapGR;
+    tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    tapGR.numberOfTapsRequired = 1;
+    [mapView addGestureRecognizer:tapGR];
     
     for (NSInteger i = 0;i<3;i++)
     {
@@ -310,6 +316,7 @@
     return view;
 }
 
+
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     switch (status) {
@@ -324,6 +331,16 @@
             [self.locationManager startUpdatingLocation];
         }
             break;
+    }
+}
+// Add a delegate method to handle the tap and do something with it.
+-(void)handleTap:(UITapGestureRecognizer *)sender
+{
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        // handling code
+        NSLog(@"sadhadada");
+        DetailViewController *controler = [[DetailViewController alloc] init];
+        [self.navigationController pushViewController:controler animated:YES];
     }
 }
 

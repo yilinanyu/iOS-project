@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PW5-Tc-iam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1303" y="320"/>
+            <point key="canvasLocation" x="1774" y="304"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hxb-1e-MJZ">
@@ -57,7 +57,105 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tis-TA-Rbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="328"/>
+            <point key="canvasLocation" x="1019" y="304"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DWR-1s-Qsb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4W-cr-k8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="96Y-RV-KC9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Srj-bk-96G"/>
+                        <viewControllerLayoutGuide type="bottom" id="6c2-9B-2UE"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="I1D-ee-EmA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+            </objects>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="Ysm-aA-H2F">
+            <objects>
+                <viewController title="Detail" id="4rb-ew-BAZ" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YbL-un-qzJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fL7-YJ-eN4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ncp-4G-lwV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fGD-Je-Th2">
+                                <rect key="frame" x="0.0" y="60" width="320" height="220"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4rb-ew-BAZ" id="m1B-Fd-zVw"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zto-r5-cGD">
+                                <rect key="frame" x="20" y="283" width="280" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5Y-cW-kT2">
+                                <rect key="frame" x="20" y="334" width="280" height="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pj2-gm-ZKr">
+                                <rect key="frame" x="0.0" y="60" width="320" height="220"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVK-mz-uvm">
+                                <rect key="frame" x="20" y="382" width="280" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pace:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-dV-ydH">
+                                <rect key="frame" x="20" y="424" width="280" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Run" id="1K6-mQ-BdE"/>
+                    <connections>
+                        <outlet property="badgeImageView" destination="Pj2-gm-ZKr" id="I7O-zV-OI9"/>
+                        <outlet property="dateLabel" destination="q5Y-cW-kT2" id="3xI-BU-YRT"/>
+                        <outlet property="distanceLabel" destination="zto-r5-cGD" id="K9X-iQ-bEz"/>
+                        <outlet property="mapView" destination="fGD-Je-Th2" id="bGP-kK-wpa"/>
+                        <outlet property="paceLabel" destination="4jm-dV-ydH" id="EM0-Ek-uhc"/>
+                        <outlet property="timeLabel" destination="RVK-mz-uvm" id="q2O-4Q-khP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwl-2A-joV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="-401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dnm-Bx-FOb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="etC-jV-EGb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gmr-SL-Rnt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4rb-ew-BAZ" kind="relationship" relationship="rootViewController" id="fua-oh-j1y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ya-ED-HZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="-407"/>
         </scene>
     </scenes>
 </document>

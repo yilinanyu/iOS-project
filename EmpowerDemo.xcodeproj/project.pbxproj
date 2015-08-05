@@ -60,6 +60,7 @@
 		3EFBC5B71B71F03B0072F774 /* emPowerBolt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */; };
 		3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */; };
 		3EFBC5B91B71F03B0072F774 /* emPowerBolt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */; };
+		3EFBC5BC1B7202C50072F774 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC5BB1B7202C50072F774 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,8 @@
 		3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emPowerBolt.png; sourceTree = "<group>"; };
 		3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emPowerBolt@2x.png"; sourceTree = "<group>"; };
 		3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emPowerBolt@3x.png"; sourceTree = "<group>"; };
+		3EFBC5BA1B7202C50072F774 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3EFBC5BB1B7202C50072F774 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,8 @@
 				3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */,
 				3EDEE1A61B6AF4C900459E77 /* BTGlassScrollViewController.h */,
 				3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */,
+				3EFBC5BA1B7202C50072F774 /* DetailViewController.h */,
+				3EFBC5BB1B7202C50072F774 /* DetailViewController.m */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
 				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
 				3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */,
@@ -482,6 +487,7 @@
 				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
 				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,
 				3EFBC58B1B71841D0072F774 /* MenuViewController.m in Sources */,
+				3EFBC5BC1B7202C50072F774 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
