@@ -228,13 +228,6 @@
     [label setShadowOffset:CGSizeMake(1, 1)];
     [view addSubview:label];
     
-//    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    aButton.frame = CGRectMake(-60,-300,200,30);
-//    UIImage *buttonImage = [UIImage imageNamed:@"menuButton.png"];
-//    [aButton addTarget:self action:@selector(memuBarButtonItemPressed:) forControlEvents:UIControlEventTouchUpInside];
-//    [aButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
-//    [view addSubview:aButton];
-    
     CGRect rect = CGRectMake(0, 0, 310, 280);
     mapView = [[MKMapView alloc] initWithFrame:rect];
     mapView.delegate = self;
@@ -364,10 +357,8 @@
 }
 -(void)memuBarButtonItemPressed:(UIButton *) sender {
     
-    NSLog(@"you clicked on button %@", sender.tag);
-  
-//    [[self drawControllerFromAppDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-//    
+        [[self drawControllerFromAppDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+   
 }
 
 

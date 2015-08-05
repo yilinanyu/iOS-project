@@ -30,17 +30,15 @@
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"bundle:nil];
     MenuViewController *menuController = (MenuViewController *)
                     [mainStoryboard instantiateViewControllerWithIdentifier:@"MenuViewControllerID"];
-    BTGlassScrollViewController *scrollController = (BTGlassScrollViewController *)
-                    [mainStoryboard instantiateViewControllerWithIdentifier:@"BTGlassScrollViewControllerID"];
+
+    BTGlassScrollViewController * center = [[BTGlassScrollViewController alloc] init];
     
     self.drawerController = [[MMDrawerController alloc]
-                             initWithCenterViewController: scrollController
+                             initWithCenterViewController: center
                              leftDrawerViewController:menuController];
     [self.drawerController setMaximumLeftDrawerWidth:240.0];
     [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
     [self.drawerController setCloseDrawerGestureModeMask: MMCloseDrawerGestureModeAll];
-    
-    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:self.drawerController];
