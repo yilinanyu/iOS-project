@@ -16,6 +16,7 @@
 #import "CrumbPathRenderer.h"
 #import "AppDelegate.h"
 #import "DetailViewController.h"
+#import "MMDrawerController+Subclass.h"
 
 
 
@@ -92,6 +93,7 @@
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     self.view.backgroundColor = [UIColor clearColor];
     mapView.delegate =self;
+
    
     
     UIImageView* logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
@@ -338,7 +340,6 @@
 {
     if (sender.state == UIGestureRecognizerStateEnded) {
         // handling code
-        NSLog(@"sadhadada");
         DetailViewController *controler = [[DetailViewController alloc] init];
         [self.navigationController pushViewController:controler animated:YES];
     }
@@ -493,7 +494,7 @@
 #pragma mark - DrawerController
 
 - (MMDrawerController *) drawControllerFromAppDelegate {
-    AppDelegate *appDelegate = ((AppDelegate *)[[UIApplication sharedApplication] delegate]);
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     return appDelegate.drawerController;
 }
 

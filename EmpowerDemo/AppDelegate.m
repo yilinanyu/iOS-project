@@ -8,10 +8,11 @@
 
 
 #import "AppDelegate.h"
-#import "TrackingMapView.h"
 #import <MapKit/MKMapView.h>
 #import "MenuViewController.h"
 #import "BTGlassScrollViewController.h"
+#import "DetailViewController.h"
+#import "MMDrawerController+Subclass.h"
 
 #define NUMBER_OF_PAGES 1
 
@@ -22,27 +23,6 @@
     int _currentIndex;
     CGFloat _glassScrollOffset;
     
-}
-
-
--(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"bundle:nil];
-    MenuViewController *menuController = (MenuViewController *)
-                    [mainStoryboard instantiateViewControllerWithIdentifier:@"MenuViewControllerID"];
-
-    BTGlassScrollViewController * center = [[BTGlassScrollViewController alloc] init];
-    
-    self.drawerController = [[MMDrawerController alloc]
-                             initWithCenterViewController: center
-                             leftDrawerViewController:menuController];
-    [self.drawerController setMaximumLeftDrawerWidth:240.0];
-    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [self.drawerController setCloseDrawerGestureModeMask: MMCloseDrawerGestureModeAll];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setRootViewController:self.drawerController];
-    return YES;
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
@@ -76,9 +56,33 @@
         }
     }
     
-    self.window.rootViewController = pageViewController;
+   self.window.rootViewController = pageViewController;
     return YES;
 }
+
+
+//-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"bundle:nil];
+//    MenuViewController *menuController = (MenuViewController *)
+//                    [mainStoryboard instantiateViewControllerWithIdentifier:@"MenuViewControllerID"];
+//    BTGlassScrollViewController * center = [[BTGlassScrollViewController alloc] init];
+////
+////    BTGlassScrollViewController *detailController = (BTGlassScrollViewController *)
+////    [mainStoryboard instantiateViewControllerWithIdentifier:@"BTGlassScrollViewControllerID"];
+//    
+//    
+//    MMDrawerController* drawerController = [[MMDrawerController alloc]
+//                             initWithCenterViewController: center
+//                             leftDrawerViewController:menuController];
+//    [self.drawerController setMaximumLeftDrawerWidth:240.0];
+//    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+//    [self.drawerController setCloseDrawerGestureModeMask: MMCloseDrawerGestureModeAll];
+//    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.rootViewController = drawerController;
+//    return YES;
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

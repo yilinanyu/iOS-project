@@ -15,5 +15,11 @@
 }
 @property (nonatomic, strong) BTGlassScrollView *glassScrollView;
 @property (nonatomic,retain) MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UILabel *Distance;
+@property (strong, nonatomic) IBOutlet UILabel *time;
+@property (strong, nonatomic) IBOutlet UILabel *pace;
+
+
+
 @property (nonatomic, assign) CLLocationDistance distance;
 @end

@@ -7,7 +7,7 @@
         <!--Menu View Controller-->
         <scene sceneID="dC6-i7-LgW">
             <objects>
-                <viewController id="bCA-C7-sb1" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewControllerID" id="bCA-C7-sb1" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="khe-Ag-TZZ"/>
                         <viewControllerLayoutGuide type="bottom" id="j3m-bN-pAh"/>
@@ -39,12 +39,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PW5-Tc-iam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="304"/>
+            <point key="canvasLocation" x="1155" y="728"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hxb-1e-MJZ">
             <objects>
-                <navigationController storyboardIdentifier="MenuViewControllerID" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I06-LI-Q79" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I06-LI-Q79" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="htM-7J-uJa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -57,13 +57,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tis-TA-Rbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="304"/>
+            <point key="canvasLocation" x="420" y="728"/>
         </scene>
-        <!--View Controller-->
+        <!--Glass Scroll View Controller-->
         <scene sceneID="DWR-1s-Qsb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h4W-cr-k8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="96Y-RV-KC9" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="96Y-RV-KC9" customClass="BTGlassScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Srj-bk-96G"/>
                         <viewControllerLayoutGuide type="bottom" id="6c2-9B-2UE"/>
@@ -74,8 +73,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uT7-l6-3fd"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h4W-cr-k8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1298" y="-23"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Ysm-aA-H2F">
@@ -122,27 +124,33 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tmz-uq-iXM">
+                                <rect key="frame" x="16" y="55" width="320" height="220"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Run" id="1K6-mQ-BdE"/>
+                    <navigationItem key="navigationItem" title="Detauk" id="1K6-mQ-BdE"/>
                     <connections>
+                        <outlet property="Distance" destination="zto-r5-cGD" id="A5l-d8-cT5"/>
                         <outlet property="badgeImageView" destination="Pj2-gm-ZKr" id="I7O-zV-OI9"/>
                         <outlet property="dateLabel" destination="q5Y-cW-kT2" id="3xI-BU-YRT"/>
                         <outlet property="distanceLabel" destination="zto-r5-cGD" id="K9X-iQ-bEz"/>
                         <outlet property="mapView" destination="fGD-Je-Th2" id="bGP-kK-wpa"/>
+                        <outlet property="pace" destination="4jm-dV-ydH" id="GcZ-bu-PDw"/>
                         <outlet property="paceLabel" destination="4jm-dV-ydH" id="EM0-Ek-uhc"/>
+                        <outlet property="time" destination="RVK-mz-uvm" id="X6l-az-Mq9"/>
                         <outlet property="timeLabel" destination="RVK-mz-uvm" id="q2O-4Q-khP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwl-2A-joV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="-401"/>
+            <point key="canvasLocation" x="3220" y="-367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dnm-Bx-FOb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="etC-jV-EGb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DetainViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="etC-jV-EGb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gmr-SL-Rnt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -155,7 +163,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ya-ED-HZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1729" y="-407"/>
+            <point key="canvasLocation" x="2534" y="-367"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vcU-eP-AqK">
+            <objects>
+                <navigationController storyboardIdentifier="BTGlassScrollViewControllerID" automaticallyAdjustsScrollViewInsets="NO" id="gd7-gN-liV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X8Q-R2-ve6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="96Y-RV-KC9" kind="relationship" relationship="rootViewController" id="EYd-bp-ly2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXD-H2-gwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="-23"/>
         </scene>
     </scenes>
 </document>
