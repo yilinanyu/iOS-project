@@ -2,12 +2,11 @@
 //  DetailViewController.m
 //  EmpowerDemo
 //
-//  Created by Lina on 8/5/15.
+//  Created by Lina on 8/6/15.
 //  Copyright (c) 2015 empower. All rights reserved.
 //
 
 #import "DetailViewController.h"
-
 
 @interface DetailViewController ()
 
@@ -17,50 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.view.backgroundColor=[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background3.png"]];
-    [self loadMap];
-    [self configureView];
+    // Do any additional setup after loading the view.
 }
-
-
-- (void)loadMap
-{
-    if (_distance > 0) {
-        
-        self.mapView.hidden = NO;
-        
-        
-    } else {
-        
-        // no locations were found!
-        self.mapView.hidden = NO;
-        
-//        UIAlertView *alertView = [[UIAlertView alloc]
-//                                  initWithTitle:@"Error"
-//                                  message:@"Sorry, this run has no locations saved."
-//                                  delegate:self
-//                                  cancelButtonTitle:@"OK"
-//                                  otherButtonTitles:nil];
-//        [alertView show];
-    }
-}
--(UIView *)configureView{
-    
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 20, 20)];
-    [label setText:[NSString stringWithFormat:@"%i",arc4random_uniform(20) + 60]];
-    [label setTextColor:[UIColor whiteColor]];
-    [view addSubview:label];
-    return view;
-    
-    
-    
-    
-}
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

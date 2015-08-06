@@ -7,21 +7,38 @@
 //
 
 #import "MenuTableViewController.h"
+#import "DetailViewController.h"
 
 @interface MenuTableViewController ()
 
 @end
 
-@implementation MenuTableViewController
+@implementation MenuTableViewController{
+     NSArray *recipes;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Initialize table data
+    recipes = [NSArray arrayWithObjects:@"Term and Setting", @"Logout", @"Full Breakfast", @"Hamburger", nil];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+  }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [recipes count];
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,18 +47,12 @@
 }
 
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
+//
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Potentially incomplete method implementation.
+//    // Return the number of sections.
+//    return 0;
+//}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,21 +98,29 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+
+     DetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewControllerID"];
+//    [detailViewController.view setBackgroundColor:[UIColor clearColor]];
+//    
+//     Pass the selected object to the new view controller.
+//    
+//     Push the view controller.
     
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    CATransition *animation = [CATransition animation];
+    [animation setDuration:2];
+    [animation setType:kCATransitionPush];
+    [animation setSubtype:kCATransitionFromTop];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [self.navigationController pushViewController:detailViewController animated:NO];
+    [[detailViewController.view layer] addAnimation:animation forKey:@"SwitchToView1"];
+
 }
-*/
+
 
 /*
 #pragma mark - Navigation

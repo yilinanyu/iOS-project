@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  BTGlassScrollViewController.m
 //  EmpowerDemo
 //
 //  Created by Lina on 7/30/15.
@@ -15,9 +15,9 @@
 #import "CrumbPath.h"
 #import "CrumbPathRenderer.h"
 #import "AppDelegate.h"
-#import "DetailViewController.h"
-#import "SWRevealViewController.h"
+#import "MapViewController.h"
 #import "MenuTableViewController.h"
+
 
 
 
@@ -89,10 +89,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    UIImage *image = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self.revealViewController action:@selector(revealToggle:)];
-//    self.navigationItem.rightBarButtonItem = aButton;
-//    
+
+    
+    UIImage *image = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(btnClicked:)];
+    self.navigationItem.leftBarButtonItem = aButton;
+    
 //    SWRevealViewController *revealViewController = self.revealViewController;
 //    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //    MenuTableViewController *vc = [sb instantiateViewControllerWithIdentifier:@"MenuTableViewControllerID"];
@@ -100,23 +102,24 @@
 //    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
 //    [revealViewController setFrontViewController:navigationController animated:YES];
 //    
-//    [self setAutomaticallyAdjustsScrollViewInsets:NO];
-//    self.view.backgroundColor = [UIColor clearColor];
-//    mapView.delegate =self;
-    // for memu bar controller
-    self.title = NSLocalizedString(@"Front View", nil);
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    self.view.backgroundColor = [UIColor clearColor];
+    mapView.delegate =self;
     
-    SWRevealViewController *revealController = [self revealViewController];
     
-    [revealController panGestureRecognizer];
-    [revealController tapGestureRecognizer];
-    //Add an image to your project & set that image here.
-//    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
-//    self.navigationItem.leftBarButtonItem = revealButtonItem;
     
-    //Add an image to your project & set that image here.
-    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
-    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
+//    // for memu bar controller
+//    self.title = NSLocalizedString(@"Front View", nil);
+//    
+//    SWRevealViewController *revealController = [self revealViewController];
+//    
+//    [revealController panGestureRecognizer];
+//    [revealController tapGestureRecognizer];
+
+    
+//    //Add an image to your project & set that image here.
+//    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
+//    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
     
     
 
@@ -135,10 +138,26 @@
     [logoView addSubview:logoImageView];
     
      self.navigationItem.titleView = logoView;
+}
+
+
+
+- (IBAction)btnClicked:(id)sender {
     
+  
+    MenuTableViewController *wc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MenuTableViewControllerID"];
     
- 
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.45;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
+    transition.type = kCATransitionFromLeft;
+    [transition setType:kCATransitionPush];
+//    transition.subtype = kCATransitionFromLeft;
+    transition.delegate = self;
+    [self.navigationController.view.layer addAnimation:transition forKey:nil];
     
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController pushViewController:wc animated:NO];
 }
 
 // delegate method for the MKMapView
@@ -372,7 +391,7 @@
 {
     if (sender.state == UIGestureRecognizerStateEnded) {
         // handling code
-        DetailViewController *controler = [[DetailViewController alloc] init];
+        MapViewController *controler = [[MapViewController alloc] init];
         [self.navigationController pushViewController:controler animated:YES];
     }
 }
@@ -489,6 +508,7 @@
     //View Area
     
 }
+
 
 
 - (void)viewWillAppear:(BOOL)animated

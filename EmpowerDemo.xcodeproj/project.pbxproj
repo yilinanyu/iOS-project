@@ -11,6 +11,7 @@
 		3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */; };
 		3EC55CF61B72DEBA009B82AF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */; };
 		3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */; };
+		3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFF1B73F315009B82AF /* DetailViewController.m */; };
 		3EDEE1A21B6AF4C900459E77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A11B6AF4C900459E77 /* main.m */; };
 		3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */; };
 		3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */; };
@@ -57,7 +58,7 @@
 		3EFBC5B71B71F03B0072F774 /* emPowerBolt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */; };
 		3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */; };
 		3EFBC5B91B71F03B0072F774 /* emPowerBolt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */; };
-		3EFBC5BC1B7202C50072F774 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC5BB1B7202C50072F774 /* DetailViewController.m */; };
+		3EFBC5BC1B7202C50072F774 /* MaplViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC5BB1B7202C50072F774 /* MaplViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		3EC55CFE1B73F315009B82AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3EC55CFF1B73F315009B82AF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		3EDEE19C1B6AF4C900459E77 /* EmpowerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpowerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDEE1A01B6AF4C900459E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDEE1A11B6AF4C900459E77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,8 +152,8 @@
 		3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emPowerBolt.png; sourceTree = "<group>"; };
 		3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emPowerBolt@2x.png"; sourceTree = "<group>"; };
 		3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emPowerBolt@3x.png"; sourceTree = "<group>"; };
-		3EFBC5BA1B7202C50072F774 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		3EFBC5BB1B7202C50072F774 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3EFBC5BA1B7202C50072F774 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		3EFBC5BB1B7202C50072F774 /* MaplViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaplViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,14 +235,16 @@
 				3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */,
 				3EDEE1A61B6AF4C900459E77 /* BTGlassScrollViewController.h */,
 				3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */,
-				3EFBC5BA1B7202C50072F774 /* DetailViewController.h */,
-				3EFBC5BB1B7202C50072F774 /* DetailViewController.m */,
+				3EFBC5BA1B7202C50072F774 /* MapViewController.h */,
+				3EFBC5BB1B7202C50072F774 /* MaplViewController.m */,
 				3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */,
 				3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */,
 				3EC55CF81B72DEEB009B82AF /* CrumbPath */,
 				3EC55CF71B72DEDC009B82AF /* SWRevealViewController */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
 				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
+				3EC55CFE1B73F315009B82AF /* DetailViewController.h */,
+				3EC55CFF1B73F315009B82AF /* DetailViewController.m */,
 				3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */,
 				3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */,
 				3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */,
@@ -468,6 +473,7 @@
 				3EDEE1F01B6AF5BF00459E77 /* PNChartLabel.m in Sources */,
 				3EDEE1F91B6AF5BF00459E77 /* PNScatterChartData.m in Sources */,
 				3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */,
+				3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */,
 				3EDEE1FB1B6AF5BF00459E77 /* PNPieChart.m in Sources */,
 				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,
 				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
@@ -483,7 +489,7 @@
 				3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */,
 				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
 				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,
-				3EFBC5BC1B7202C50072F774 /* DetailViewController.m in Sources */,
+				3EFBC5BC1B7202C50072F774 /* MaplViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

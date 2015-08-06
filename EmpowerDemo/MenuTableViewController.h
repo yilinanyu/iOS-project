@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuTableViewController : UITableViewController
-@property (strong, nonatomic) IBOutlet UILabel *label;
+@interface MenuTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

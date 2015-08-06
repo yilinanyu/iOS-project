@@ -11,7 +11,7 @@
 #import <MapKit/MKMapView.h>
 #import "MenuViewController.h"
 #import "BTGlassScrollViewController.h"
-#import "DetailViewController.h"
+#import "MapViewController.h"
 #import "SWRevealViewController.h"
 
 #define NUMBER_OF_PAGES 1
@@ -30,69 +30,39 @@
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window = window;
-    
-    
-    
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    // Override point for customization after application launch.
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
     _viewControllerArray = [NSMutableArray array];
     UINavigationController *glassScrollVCWithNavC = [self glassScrollVCWithNavigatorForIndex:0];
     _viewControllerArray[0] = glassScrollVCWithNavC;
-    
-    
     NSDictionary* options = @{ UIPageViewControllerOptionInterPageSpacingKey : [NSNumber numberWithFloat:4.0f] };
     
     UIPageViewController *pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:options];
     [pageViewController setViewControllers:_viewControllerArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     [pageViewController.view setBackgroundColor:[UIColor clearColor]];
-//    [pageViewController setDelegate:self];
-//    [pageViewController setDataSource:self];
-//
-//    
-//    // THIS IS A HACK INTO THE PAGEVIEWCONTROLLER
-//    // PROCEED WITH CAUTION
-//    // MAY CONTAIN BUG!! (I HAVENT RAN INTO ONE YET)
-    // looking for the subview that is a scrollview so we can attach a delegate onto the view to mornitor scrolling
+    [pageViewController setDelegate:self];
+    [pageViewController setDataSource:self];
+ // looking for the subview that is a scrollview so we can attach a delegate onto the view to mornitor scrolling
     
     for (UIView *subview in pageViewController.view.subviews) {
         if ([subview isKindOfClass:[UIScrollView class]]) {
             UIScrollView *scrollview = (UIScrollView *) subview;
             [scrollview setDelegate:self];
-
         }
     }
     
-    BTGlassScrollViewController *frontViewController = [[BTGlassScrollViewController alloc] init];
-    //    RearViewController *rearViewController = [[RearViewController alloc] init];
-    MenuTableViewController *rightViewController = rightViewController = [[MenuTableViewController alloc] init];
-    
-    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
-    //    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
-    
-    SWRevealViewController *revealController = [[SWRevealViewController alloc]
-                                                initWithRearViewController:nil frontViewController:frontNavigationController];
-    
-    //    revealController.delegate = self;
-    revealController.rightViewController = rightViewController;
-    self.viewController = revealController;
-    self.window.rootViewController = self.viewController;
+//    BTGlassScrollViewController *frontViewController = [[BTGlassScrollViewController alloc] init];
+//    MenuTableViewController *rightViewController = rightViewController = [[MenuTableViewController alloc] init];
+//    
+//    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+//    
+//    SWRevealViewController *revealController = [[SWRevealViewController alloc]
+//                                                initWithRearViewController:nil frontViewController:frontNavigationController];
+//    
+//    revealController.rightViewController = rightViewController;
+//    self.viewController = revealController;
+    self.window.rootViewController = pageViewController;
     [self.window makeKeyAndVisible];
-    [self.viewController addChildViewController:pageViewController];
-//    [self.viewController.view addSubview:pageViewController.view.subviews];
-   
-    
-    
-//    [self addChildViewController:self.viewController];
-  
-//    [self.viewController.view addSubview:pageViewController.view];
-//    [self.window addSubview:pageViewController.view];
-    
-//    return YES;
-
-//
-//   self.window.rootViewController = pageViewController;
+//    [self.viewController addChildViewController:pageViewController];
+//    _viewController.view = pageViewController.view;
    return YES;
 }
 
