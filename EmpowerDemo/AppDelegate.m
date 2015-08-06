@@ -12,7 +12,7 @@
 #import "MenuViewController.h"
 #import "BTGlassScrollViewController.h"
 #import "DetailViewController.h"
-#import "MMDrawerController+Subclass.h"
+#import "SWRevealViewController.h"
 
 #define NUMBER_OF_PAGES 1
 
@@ -27,10 +27,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = window;
+    
+    
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
     _viewControllerArray = [NSMutableArray array];
     UINavigationController *glassScrollVCWithNavC = [self glassScrollVCWithNavigatorForIndex:0];
     _viewControllerArray[0] = glassScrollVCWithNavC;
@@ -41,48 +47,54 @@
     UIPageViewController *pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:options];
     [pageViewController setViewControllers:_viewControllerArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     [pageViewController.view setBackgroundColor:[UIColor clearColor]];
-    [pageViewController setDelegate:self];
-    [pageViewController setDataSource:self];
-    
-    
-    // THIS IS A HACK INTO THE PAGEVIEWCONTROLLER
-    // PROCEED WITH CAUTION
-    // MAY CONTAIN BUG!! (I HAVENT RAN INTO ONE YET)
+//    [pageViewController setDelegate:self];
+//    [pageViewController setDataSource:self];
+//
+//    
+//    // THIS IS A HACK INTO THE PAGEVIEWCONTROLLER
+//    // PROCEED WITH CAUTION
+//    // MAY CONTAIN BUG!! (I HAVENT RAN INTO ONE YET)
     // looking for the subview that is a scrollview so we can attach a delegate onto the view to mornitor scrolling
+    
     for (UIView *subview in pageViewController.view.subviews) {
         if ([subview isKindOfClass:[UIScrollView class]]) {
             UIScrollView *scrollview = (UIScrollView *) subview;
             [scrollview setDelegate:self];
+
         }
     }
     
-   self.window.rootViewController = pageViewController;
-    return YES;
-}
-
-
-//-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-//{
-//    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"bundle:nil];
-//    MenuViewController *menuController = (MenuViewController *)
-//                    [mainStoryboard instantiateViewControllerWithIdentifier:@"MenuViewControllerID"];
-//    BTGlassScrollViewController * center = [[BTGlassScrollViewController alloc] init];
-////
-////    BTGlassScrollViewController *detailController = (BTGlassScrollViewController *)
-////    [mainStoryboard instantiateViewControllerWithIdentifier:@"BTGlassScrollViewControllerID"];
-//    
-//    
-//    MMDrawerController* drawerController = [[MMDrawerController alloc]
-//                             initWithCenterViewController: center
-//                             leftDrawerViewController:menuController];
-//    [self.drawerController setMaximumLeftDrawerWidth:240.0];
-//    [self.drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-//    [self.drawerController setCloseDrawerGestureModeMask: MMCloseDrawerGestureModeAll];
-//    
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.rootViewController = drawerController;
+    BTGlassScrollViewController *frontViewController = [[BTGlassScrollViewController alloc] init];
+    //    RearViewController *rearViewController = [[RearViewController alloc] init];
+    MenuTableViewController *rightViewController = rightViewController = [[MenuTableViewController alloc] init];
+    
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    //    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+    
+    SWRevealViewController *revealController = [[SWRevealViewController alloc]
+                                                initWithRearViewController:nil frontViewController:frontNavigationController];
+    
+    //    revealController.delegate = self;
+    revealController.rightViewController = rightViewController;
+    self.viewController = revealController;
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    [self.viewController addChildViewController:pageViewController];
+//    [self.viewController.view addSubview:pageViewController.view.subviews];
+   
+    
+    
+//    [self addChildViewController:self.viewController];
+  
+//    [self.viewController.view addSubview:pageViewController.view];
+//    [self.window addSubview:pageViewController.view];
+    
 //    return YES;
-//}
+
+//
+//   self.window.rootViewController = pageViewController;
+   return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -10,6 +10,8 @@
 #import "BTGlassScrollView.h"
 #import <MapKit/MapKit.h>
 #import "CoreLocation/CoreLocation.h"
+#import "SWRevealViewController.h"
+
 
 
 @interface BTGlassScrollViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>

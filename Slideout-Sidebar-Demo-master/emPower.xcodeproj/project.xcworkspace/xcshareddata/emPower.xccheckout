@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>22E22D3A-F2D8-4876-B28B-340ADA7DD5AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>emPower</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5DC5BF3C89EBC38EB4AE3854BAE4D3CDAFA0BB5D</key>
+		<string>https://github.com/yilinanyu/iOS-project.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>emPower/emPower.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5DC5BF3C89EBC38EB4AE3854BAE4D3CDAFA0BB5D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yilinanyu/iOS-project.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5DC5BF3C89EBC38EB4AE3854BAE4D3CDAFA0BB5D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5DC5BF3C89EBC38EB4AE3854BAE4D3CDAFA0BB5D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-project</string>
+		</dict>
+	</array>
+</dict>
+</plist>

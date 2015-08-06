@@ -16,7 +16,9 @@
 #import "CrumbPathRenderer.h"
 #import "AppDelegate.h"
 #import "DetailViewController.h"
-#import "MMDrawerController+Subclass.h"
+#import "SWRevealViewController.h"
+#import "MenuTableViewController.h"
+
 
 
 
@@ -87,12 +89,36 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImage *image = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(memuBarButtonItemPressed:)];
-    self.navigationItem.leftBarButtonItem = aButton;
-    [self setAutomaticallyAdjustsScrollViewInsets:NO];
-    self.view.backgroundColor = [UIColor clearColor];
-    mapView.delegate =self;
+//    UIImage *image = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self.revealViewController action:@selector(revealToggle:)];
+//    self.navigationItem.rightBarButtonItem = aButton;
+//    
+//    SWRevealViewController *revealViewController = self.revealViewController;
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    MenuTableViewController *vc = [sb instantiateViewControllerWithIdentifier:@"MenuTableViewControllerID"];
+//    
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [revealViewController setFrontViewController:navigationController animated:YES];
+//    
+//    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+//    self.view.backgroundColor = [UIColor clearColor];
+//    mapView.delegate =self;
+    // for memu bar controller
+    self.title = NSLocalizedString(@"Front View", nil);
+    
+    SWRevealViewController *revealController = [self revealViewController];
+    
+    [revealController panGestureRecognizer];
+    [revealController tapGestureRecognizer];
+    //Add an image to your project & set that image here.
+//    UIBarButtonItem *revealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+//    self.navigationItem.leftBarButtonItem = revealButtonItem;
+    
+    //Add an image to your project & set that image here.
+    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
+    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
+    
+    
 
    
     
@@ -223,14 +249,20 @@
 - (UIView *)customView
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(120, -250, 310, 120)];
+//    UIImageView* scoreView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    UIImage *scoreImage = [UIImage imageNamed:@"emPowerBolt@2x.png"];
+    
+    UIImageView *scoreImageView =[[UIImageView alloc] initWithFrame:CGRectMake(90,-220,29,60)];
+    [scoreImageView setImage:scoreImage];
+   
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(140, -250, 310, 120)];
     [label setText:[NSString stringWithFormat:@"%i",arc4random_uniform(20) + 60]];
     [label setTextColor:[UIColor whiteColor]];
-    [label setFont:[UIFont fontWithName:@"OpenSans-Bold" size:70]];
+    [label setFont:[UIFont fontWithName:@"OpenSans-Light" size:70]];
     [label setShadowColor:[UIColor blackColor]];
     [label setShadowOffset:CGSizeMake(1, 1)];
     [view addSubview:label];
-    
+    [view addSubview:scoreImageView];
     CGRect rect = CGRectMake(0, 0, 310, 280);
     mapView = [[MKMapView alloc] initWithFrame:rect];
     mapView.delegate = self;
@@ -345,6 +377,7 @@
     }
 }
 
+
 #pragma mark - MapKit
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
@@ -373,13 +406,6 @@
     
     return renderer;
 }
--(void)memuBarButtonItemPressed:(UIButton *) sender {
-    
-        [[self drawControllerFromAppDelegate] toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-   
-}
-
-
 
 - (void)buttonLongPressed:(UILongPressGestureRecognizer *)sender
 {
@@ -489,13 +515,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
     
-}
-
-#pragma mark - DrawerController
-
-- (MMDrawerController *) drawControllerFromAppDelegate {
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    return appDelegate.drawerController;
 }
 
 

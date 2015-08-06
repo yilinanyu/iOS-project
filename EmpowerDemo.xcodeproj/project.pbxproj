@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E1246D41B6F760000DCBAC6 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D11B6F760000DCBAC6 /* CrumbPath.m */; };
 		3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */; };
+		3EC55CF61B72DEBA009B82AF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */; };
+		3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */; };
 		3EDEE1A21B6AF4C900459E77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A11B6AF4C900459E77 /* main.m */; };
 		3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */; };
 		3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */; };
@@ -39,11 +41,6 @@
 		3EDEE2071B6AF65000459E77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2061B6AF65000459E77 /* UIKit.framework */; };
 		3EDEE2091B6AF65E00459E77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */; };
 		3EFBC5881B7182410072F774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5871B7182410072F774 /* Main.storyboard */; };
-		3EFBC58B1B71841D0072F774 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC58A1B71841D0072F774 /* MenuViewController.m */; };
-		3EFBC5951B718E690072F774 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC58D1B718E690072F774 /* MMDrawerBarButtonItem.m */; };
-		3EFBC5961B718E690072F774 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC58F1B718E690072F774 /* MMDrawerController.m */; };
-		3EFBC5971B718E690072F774 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC5921B718E690072F774 /* MMDrawerVisualState.m */; };
-		3EFBC5981B718E690072F774 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EFBC5941B718E690072F774 /* UIViewController+MMDrawerController.m */; };
 		3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5991B71C3390072F774 /* menuButton.png */; };
 		3EFBC59C1B71C3390072F774 /* menuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC59A1B71C3390072F774 /* menuButton@2x.png */; };
 		3EFBC5A81B71CC870072F774 /* Apache License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC59D1B71CC860072F774 /* Apache License.txt */; };
@@ -78,6 +75,10 @@
 		3E1246D11B6F760000DCBAC6 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
 		3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathRenderer.h; sourceTree = "<group>"; };
 		3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathRenderer.m; sourceTree = "<group>"; };
+		3EC55CF41B72DEB9009B82AF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		3EDEE19C1B6AF4C900459E77 /* EmpowerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpowerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDEE1A01B6AF4C900459E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDEE1A11B6AF4C900459E77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,17 +133,6 @@
 		3EDEE2061B6AF65000459E77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EFBC5871B7182410072F774 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3EFBC5891B71841D0072F774 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		3EFBC58A1B71841D0072F774 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		3EFBC58C1B718E690072F774 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		3EFBC58D1B718E690072F774 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		3EFBC58E1B718E690072F774 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
-		3EFBC58F1B718E690072F774 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
-		3EFBC5901B718E690072F774 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		3EFBC5911B718E690072F774 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
-		3EFBC5921B718E690072F774 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
-		3EFBC5931B718E690072F774 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		3EFBC5941B718E690072F774 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		3EFBC5991B71C3390072F774 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
 		3EFBC59A1B71C3390072F774 /* menuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuButton@2x.png"; sourceTree = "<group>"; };
 		3EFBC59D1B71CC860072F774 /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
@@ -193,12 +183,28 @@
 				3EFBC5B41B71F03B0072F774 /* emPowerBolt.png */,
 				3EFBC5B51B71F03B0072F774 /* emPowerBolt@2x.png */,
 				3EFBC5B61B71F03B0072F774 /* emPowerBolt@3x.png */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		3EC55CF71B72DEDC009B82AF /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3EC55CF41B72DEB9009B82AF /* SWRevealViewController.h */,
+				3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		3EC55CF81B72DEEB009B82AF /* CrumbPath */ = {
+			isa = PBXGroup;
+			children = (
 				3E1246D01B6F760000DCBAC6 /* CrumbPath.h */,
 				3E1246D11B6F760000DCBAC6 /* CrumbPath.m */,
 				3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */,
 				3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */,
 			);
-			name = Overlay;
+			name = CrumbPath;
 			sourceTree = "<group>";
 		};
 		3EDEE1931B6AF4C900459E77 = {
@@ -228,6 +234,10 @@
 				3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */,
 				3EFBC5BA1B7202C50072F774 /* DetailViewController.h */,
 				3EFBC5BB1B7202C50072F774 /* DetailViewController.m */,
+				3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */,
+				3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */,
+				3EC55CF81B72DEEB009B82AF /* CrumbPath */,
+				3EC55CF71B72DEDC009B82AF /* SWRevealViewController */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
 				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
 				3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */,
@@ -235,17 +245,6 @@
 				3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */,
 				3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */,
 				3EFBC5871B7182410072F774 /* Main.storyboard */,
-				3EFBC5891B71841D0072F774 /* MenuViewController.h */,
-				3EFBC58A1B71841D0072F774 /* MenuViewController.m */,
-				3EFBC58C1B718E690072F774 /* MMDrawerBarButtonItem.h */,
-				3EFBC58D1B718E690072F774 /* MMDrawerBarButtonItem.m */,
-				3EFBC58E1B718E690072F774 /* MMDrawerController.h */,
-				3EFBC58F1B718E690072F774 /* MMDrawerController.m */,
-				3EFBC5901B718E690072F774 /* MMDrawerController+Subclass.h */,
-				3EFBC5911B718E690072F774 /* MMDrawerVisualState.h */,
-				3EFBC5921B718E690072F774 /* MMDrawerVisualState.m */,
-				3EFBC5931B718E690072F774 /* UIViewController+MMDrawerController.h */,
-				3EFBC5941B718E690072F774 /* UIViewController+MMDrawerController.m */,
 				3EFBC5B31B71CC8F0072F774 /* Fonts */,
 				3E1246D61B6F760E00DCBAC6 /* Overlay */,
 				3EDEE1FD1B6AF5C700459E77 /* PNChart */,
@@ -461,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */,
-				3EFBC5951B718E690072F774 /* MMDrawerBarButtonItem.m in Sources */,
 				3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */,
 				3EDEE1CC1B6AF59800459E77 /* BTGlassScrollView.m in Sources */,
 				3EDEE1F41B6AF5BF00459E77 /* PNLineChart.m in Sources */,
@@ -474,19 +472,17 @@
 				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,
 				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
 				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
-				3EFBC5971B718E690072F774 /* MMDrawerVisualState.m in Sources */,
-				3EFBC5981B718E690072F774 /* UIViewController+MMDrawerController.m in Sources */,
 				3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */,
+				3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */,
 				3EDEE1F31B6AF5BF00459E77 /* PNGenericChart.m in Sources */,
-				3EFBC5961B718E690072F774 /* MMDrawerController.m in Sources */,
 				3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */,
 				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
 				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,
 				3EDEE1F81B6AF5BF00459E77 /* PNScatterChart.m in Sources */,
+				3EC55CF61B72DEBA009B82AF /* SWRevealViewController.m in Sources */,
 				3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */,
 				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
 				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,
-				3EFBC58B1B71841D0072F774 /* MenuViewController.m in Sources */,
 				3EFBC5BC1B7202C50072F774 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    self.view.backgroundColor=[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background3.png"]];
+    self.view.backgroundColor=[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background3.png"]];
     [self loadMap];
     [self configureView];
 }
@@ -52,9 +52,6 @@
     [label setText:[NSString stringWithFormat:@"%i",arc4random_uniform(20) + 60]];
     [label setTextColor:[UIColor whiteColor]];
     [view addSubview:label];
-    NSLog(@"it is working！！！！");
-
-    
     return view;
     
     
