@@ -63,6 +63,38 @@
             </objects>
             <point key="canvasLocation" x="7655" y="575"/>
         </scene>
+        <!--Scroll Detail View Controller-->
+        <scene sceneID="tZc-0K-cav">
+            <objects>
+                <viewController storyboardIdentifier="ScrollDetailViewControllerID" id="bxY-37-aqu" customClass="ScrollDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hz1-Zj-nfo"/>
+                        <viewControllerLayoutGuide type="bottom" id="9zh-Y4-Elg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ph1-eU-vc2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="FKr-bx-Sj3">
+                                <rect key="frame" x="0.0" y="192" width="600" height="424"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YnI-AK-zjF">
+                                        <rect key="frame" x="281" y="85" width="39" height="37"/>
+                                    </pageControl>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Vm-qh-uaX"/>
+                    <connections>
+                        <outlet property="bigscrollView" destination="FKr-bx-Sj3" id="GXm-xc-0yb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVX-vH-3AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10327" y="553"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kkv-kK-7Xv">
             <objects>
@@ -80,6 +112,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyn-rN-AiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6843" y="575"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ELJ-d7-htw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FJf-yY-lRp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e81-ix-dWG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bxY-37-aqu" kind="relationship" relationship="rootViewController" id="WaO-yC-CZv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAK-xd-OEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9515" y="553"/>
         </scene>
     </scenes>
 </document>

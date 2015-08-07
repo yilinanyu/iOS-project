@@ -15,9 +15,9 @@
 #import "CrumbPath.h"
 #import "CrumbPathRenderer.h"
 #import "AppDelegate.h"
-#import "MapViewController.h"
-#import "MenuTableViewController.h"
 
+#import "MenuTableViewController.h"
+#import "ScrollDetailViewController.h"
 @interface BTGlassScrollViewController()<MKMapViewDelegate,CLLocationManagerDelegate>
 {
     BOOL contain;
@@ -91,6 +91,12 @@
     UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(btnClicked:)];
     self.navigationItem.leftBarButtonItem = aButton;
     
+    UIImage *image2 = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:image2 style:UIBarButtonItemStylePlain target:self action:@selector(bbbtnClicked:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    
+    //drawer controller
 //    SWRevealViewController *revealViewController = self.revealViewController;
 //    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //    MenuTableViewController *vc = [sb instantiateViewControllerWithIdentifier:@"MenuTableViewControllerID"];
@@ -134,6 +140,14 @@
     [logoView addSubview:logoImageView];
     
      self.navigationItem.titleView = logoView;
+}
+
+// right menu button function
+- (IBAction)bbbtnClicked:(id)sender {
+    
+    
+    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
+    [self.navigationController pushViewController:sc animated:YES];
 }
 
 
@@ -387,7 +401,7 @@
 //{
 //    if (sender.state == UIGestureRecognizerStateEnded) {
 //        // handling code
-//        MapViewController *controler = [[MapViewController alloc] init];
+//        ScrollDetailViewController *controler = [[ScrollDetailViewController alloc] init];
 //        [self.navigationController pushViewController:controler animated:YES];
 //    }
 //}
