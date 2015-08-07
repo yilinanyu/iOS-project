@@ -8,7 +8,6 @@
 
 #import "MenuTableViewController.h"
 #import "DetailViewController.h"
-
 @interface MenuTableViewController ()
 
 @end
@@ -19,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.delegate = self;
     // Initialize table data
     recipes = [NSArray arrayWithObjects:@"Term and Setting", @"Logout", @"Full Breakfast", @"Hamburger", nil];
     
@@ -103,21 +103,22 @@
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"segueIdentifier" sender:tableView];
 
-     DetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewControllerID"];
+//     DetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DetailViewControllerID"];
 //    [detailViewController.view setBackgroundColor:[UIColor clearColor]];
 //    
 //     Pass the selected object to the new view controller.
 //    
 //     Push the view controller.
-    
-    CATransition *animation = [CATransition animation];
-    [animation setDuration:2];
-    [animation setType:kCATransitionPush];
-    [animation setSubtype:kCATransitionFromTop];
-    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-    [self.navigationController pushViewController:detailViewController animated:NO];
-    [[detailViewController.view layer] addAnimation:animation forKey:@"SwitchToView1"];
+//    
+//    CATransition *animation = [CATransition animation];
+//    [animation setDuration:1];
+//    [animation setType:kCATransitionPush];
+//    [animation setSubtype:kCATransitionFromTop];
+//    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+//    [self.navigationController pushViewController:detailViewController animated:YES];
+//    [[detailViewController.view layer] addAnimation:animation forKey:@"SwitchToView1"];
 
 }
 

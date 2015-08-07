@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "BTGlassScrollViewController.h"
 
 
 @interface MapViewController ()
@@ -21,6 +22,13 @@
     self.view.backgroundColor=[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background3.png"]];
     [self loadMap];
     [self configureView];
+    
+//    [self addChildViewController:BTGlassScrollViewController];
+//    
+//    
+//    
+//    
+//    [_view addSubview BTGlassScrollViewController.mapView];
 }
 
 

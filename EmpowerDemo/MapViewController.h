@@ -16,4 +16,5 @@
 @property (nonatomic, strong) BTGlassScrollView *glassScrollView;
 @property (nonatomic,retain) MKMapView *mapView;
 @property (nonatomic, assign) CLLocationDistance distance;
+@property (strong, nonatomic) BTGlassScrollViewController *viewController;
 @end

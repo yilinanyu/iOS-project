@@ -40,6 +40,8 @@
     [pageViewController.view setBackgroundColor:[UIColor clearColor]];
     [pageViewController setDelegate:self];
     [pageViewController setDataSource:self];
+    self.window.backgroundColor = [UIColor clearColor];
+//    self.window.tintColor = [UIColor whiteColor];
  // looking for the subview that is a scrollview so we can attach a delegate onto the view to mornitor scrolling
     
     for (UIView *subview in pageViewController.view.subviews) {
