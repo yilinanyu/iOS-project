@@ -18,10 +18,6 @@
 #import "MapViewController.h"
 #import "MenuTableViewController.h"
 
-
-
-
-
 @interface BTGlassScrollViewController()<MKMapViewDelegate,CLLocationManagerDelegate>
 {
     BOOL contain;
@@ -326,11 +322,11 @@
     label1 = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 120)];
     label1.textColor = [UIColor whiteColor];
     
-    // In some View controller
-    UITapGestureRecognizer *tapGR;
-    tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    tapGR.numberOfTapsRequired = 1;
-    [mapView addGestureRecognizer:tapGR];
+//    // In some View controller
+//    UITapGestureRecognizer *tapGR;
+//    tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+//    tapGR.numberOfTapsRequired = 1;
+//    [mapView addGestureRecognizer:tapGR];
     
     for (NSInteger i = 0;i<3;i++)
     {
@@ -386,15 +382,15 @@
             break;
     }
 }
-// Add a delegate method to handle the tap and do something with it.
--(void)handleTap:(UITapGestureRecognizer *)sender
-{
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        // handling code
-        MapViewController *controler = [[MapViewController alloc] init];
-        [self.navigationController pushViewController:controler animated:YES];
-    }
-}
+//// Add a delegate method to handle the tap and do something with it.
+//-(void)handleTap:(UITapGestureRecognizer *)sender
+//{
+//    if (sender.state == UIGestureRecognizerStateEnded) {
+//        // handling code
+//        MapViewController *controler = [[MapViewController alloc] init];
+//        [self.navigationController pushViewController:controler animated:YES];
+//    }
+//}
 
 
 #pragma mark - MapKit
