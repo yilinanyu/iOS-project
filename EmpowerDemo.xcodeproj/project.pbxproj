@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E1246D41B6F760000DCBAC6 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D11B6F760000DCBAC6 /* CrumbPath.m */; };
 		3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */; };
-		3EC55CF61B72DEBA009B82AF /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */; };
 		3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */; };
 		3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFF1B73F315009B82AF /* DetailViewController.m */; };
 		3EDEE1A21B6AF4C900459E77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A11B6AF4C900459E77 /* main.m */; };
@@ -76,8 +75,6 @@
 		3E1246D11B6F760000DCBAC6 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
 		3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathRenderer.h; sourceTree = "<group>"; };
 		3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathRenderer.m; sourceTree = "<group>"; };
-		3EC55CF41B72DEB9009B82AF /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		3EC55CFE1B73F315009B82AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -190,15 +187,6 @@
 			name = Overlay;
 			sourceTree = "<group>";
 		};
-		3EC55CF71B72DEDC009B82AF /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3EC55CF41B72DEB9009B82AF /* SWRevealViewController.h */,
-				3EC55CF51B72DEB9009B82AF /* SWRevealViewController.m */,
-			);
-			name = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		3EC55CF81B72DEEB009B82AF /* CrumbPath */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +228,6 @@
 				3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */,
 				3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */,
 				3EC55CF81B72DEEB009B82AF /* CrumbPath */,
-				3EC55CF71B72DEDC009B82AF /* SWRevealViewController */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
 				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
 				3EC55CFE1B73F315009B82AF /* DetailViewController.h */,
@@ -485,7 +472,6 @@
 				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
 				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,
 				3EDEE1F81B6AF5BF00459E77 /* PNScatterChart.m in Sources */,
-				3EC55CF61B72DEBA009B82AF /* SWRevealViewController.m in Sources */,
 				3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */,
 				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
 				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,

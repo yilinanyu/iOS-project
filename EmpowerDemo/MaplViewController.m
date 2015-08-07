@@ -1,5 +1,5 @@
 //
-//  DetailViewController.m
+//  MapViewController.m
 //  EmpowerDemo
 //
 //  Created by Lina on 8/5/15.
@@ -19,16 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor=[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background3.png"]];
-    [self loadMap];
-    [self configureView];
-    
-//    [self addChildViewController:BTGlassScrollViewController];
-//    
-//    
-//    
-//    
-//    [_view addSubview BTGlassScrollViewController.mapView];
+  
 }
 
 
@@ -56,15 +47,13 @@
 -(UIView *)configureView{
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
+    view.backgroundColor = UIColor.grayColor;
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 20, 20)];
-    [label setText:[NSString stringWithFormat:@"%i",arc4random_uniform(20) + 60]];
+    [label setText:@"asdasdasd"];
     [label setTextColor:[UIColor whiteColor]];
     [view addSubview:label];
+    [view addSubview: _mapView];
     return view;
-    
-    
-    
-    
 }
 
 

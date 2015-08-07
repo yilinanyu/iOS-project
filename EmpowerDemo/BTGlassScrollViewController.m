@@ -297,7 +297,7 @@
     mapView.showsUserLocation = YES;
     [mapView setMapType:MKMapTypeStandard];
     [mapView setZoomEnabled:YES];
-    [mapView setScrollEnabled:YES];
+    [mapView setScrollEnabled:NO];
     
     self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     self.locationManager.distanceFilter= 10.0;
