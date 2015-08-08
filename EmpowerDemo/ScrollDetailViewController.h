@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScrollDetailViewController : UIViewController
-
-@property (strong, nonatomic) IBOutlet UIScrollView *bigscrollView;
-@property (strong, nonatomic) IBOutlet UIScrollView *smallscrollView;
-
+@interface ScrollDetailViewController : UIViewController <UIScrollViewDelegate>
+{
+    UIPageControl *pageControl;
+    BOOL pageControlBingUsed;
+}
+@property(nonatomic) CGPoint contentOffset;
+@property (nonatomic,retain) UIPageControl *pageControl;
+@property (nonatomic,retain) UIView *chartView;
+@property (nonatomic,retain) UIScrollView *scrollView;
 @end
