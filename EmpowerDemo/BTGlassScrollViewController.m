@@ -95,8 +95,8 @@
 {
     [super viewDidLoad];
     
-    self.defaultImage = [UIImage imageNamed:@"background3.jpg"];
-    self.blurImage = [[UIImage imageNamed:@"background3.jpg"] applyDarkEffect];
+    self.defaultImage = [UIImage imageNamed:@"background2.jpg"];
+    self.blurImage = [[UIImage imageNamed:@"background2.jpg"] applyDarkEffect];
     
    
     ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];

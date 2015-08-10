@@ -40,7 +40,7 @@
     pageControlBingUsed = NO;
     
     
-    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 100, 320, 150)];
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, 320, 150)];
     self.pageControl.backgroundColor = [UIColor grayColor];
     self.pageControl.numberOfPages = 3;
     self.pageControl.currentPage = 1;
