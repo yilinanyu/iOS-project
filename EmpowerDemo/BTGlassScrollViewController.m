@@ -481,7 +481,6 @@
     [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
     [barChart setYValues:@[@1,  @10, @2, @6, @3]];
     [barChart strokeChart];
-    [barChart setStrokeColor:PNWhite];
      barChart.backgroundColor = [UIColor clearColor];
     
     [self.pager.headerView.imageView addSubview:barChart];
