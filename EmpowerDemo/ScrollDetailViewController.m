@@ -47,8 +47,7 @@
     [self.pageControl addTarget:self action:@selector(changePages:) forControlEvents:UIControlEventValueChanged];
     
     
-    
-    
+       
     //    // defien chart view
     //    self.chartView =[[UIScrollView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height/2)];
     
