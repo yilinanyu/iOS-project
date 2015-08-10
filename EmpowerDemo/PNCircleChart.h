@@ -53,6 +53,7 @@ displayCountingLabel:(BOOL)displayCountingLabel;
 displayCountingLabel:(BOOL)displayCountingLabel
   overrideLineWidth:(NSNumber *)overrideLineWidth;
 
+
 @property (strong, nonatomic) UICountingLabel *countingLabel;
 @property (nonatomic) UIColor *strokeColor;
 @property (nonatomic) UIColor *strokeColorGradientStart;
