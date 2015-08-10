@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol ARSegmentControllerDelegate <NSObject>
-
--(NSString *)segmentTitle;
+//
+//-(NSString *)segmentTitle;
 
 @optional
 -(UIScrollView *)streachScrollView;

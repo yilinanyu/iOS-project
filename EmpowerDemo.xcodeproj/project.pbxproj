@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		3E1246D41B6F760000DCBAC6 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D11B6F760000DCBAC6 /* CrumbPath.m */; };
 		3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */; };
-		3EB4BE951B77427D001BCAD5 /* ARSegmentPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BE8F1B77427D001BCAD5 /* ARSegmentPageController.m */; };
-		3EB4BE961B77427D001BCAD5 /* ARSegmentPageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BE921B77427D001BCAD5 /* ARSegmentPageHeader.m */; };
-		3EB4BE971B77427D001BCAD5 /* ARSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BE941B77427D001BCAD5 /* ARSegmentView.m */; };
+		3EB4BE9E1B78A4D1001BCAD5 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BE9D1B78A4D1001BCAD5 /* NavigationViewController.m */; };
+		3EB4BEAC1B78AC8E001BCAD5 /* ARSegmentPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BEA71B78AC8E001BCAD5 /* ARSegmentPageController.m */; };
+		3EB4BEAD1B78AC8E001BCAD5 /* ARSegmentPageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BEA91B78AC8E001BCAD5 /* ARSegmentPageHeader.m */; };
+		3EB4BEAE1B78AC8E001BCAD5 /* ARSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BEAB1B78AC8E001BCAD5 /* ARSegmentView.m */; };
+		3EB4BEB11B78AF6F001BCAD5 /* listdownload.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EB4BEB01B78AF6F001BCAD5 /* listdownload.jpg */; };
+		3EB4BEB41B78B2CA001BCAD5 /* RFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BEB31B78B2CA001BCAD5 /* RFSegmentView.m */; };
 		3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */; };
 		3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFF1B73F315009B82AF /* DetailViewController.m */; };
 		3EC55D031B7539E0009B82AF /* ScrollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */; };
@@ -79,14 +82,19 @@
 		3E1246D11B6F760000DCBAC6 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
 		3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathRenderer.h; sourceTree = "<group>"; };
 		3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathRenderer.m; sourceTree = "<group>"; };
-		3EB4BE8D1B77427D001BCAD5 /* ARSegmentControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentControllerDelegate.h; sourceTree = "<group>"; };
-		3EB4BE8E1B77427D001BCAD5 /* ARSegmentPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageController.h; sourceTree = "<group>"; };
-		3EB4BE8F1B77427D001BCAD5 /* ARSegmentPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentPageController.m; sourceTree = "<group>"; };
-		3EB4BE901B77427D001BCAD5 /* ARSegmentPageControllerHeaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageControllerHeaderProtocol.h; sourceTree = "<group>"; };
-		3EB4BE911B77427D001BCAD5 /* ARSegmentPageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageHeader.h; sourceTree = "<group>"; };
-		3EB4BE921B77427D001BCAD5 /* ARSegmentPageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentPageHeader.m; sourceTree = "<group>"; };
-		3EB4BE931B77427D001BCAD5 /* ARSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentView.h; sourceTree = "<group>"; };
-		3EB4BE941B77427D001BCAD5 /* ARSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentView.m; sourceTree = "<group>"; };
+		3EB4BE9C1B78A4D1001BCAD5 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		3EB4BE9D1B78A4D1001BCAD5 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		3EB4BEA51B78AC8E001BCAD5 /* ARSegmentControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentControllerDelegate.h; sourceTree = "<group>"; };
+		3EB4BEA61B78AC8E001BCAD5 /* ARSegmentPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageController.h; sourceTree = "<group>"; };
+		3EB4BEA71B78AC8E001BCAD5 /* ARSegmentPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentPageController.m; sourceTree = "<group>"; };
+		3EB4BEA81B78AC8E001BCAD5 /* ARSegmentPageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageHeader.h; sourceTree = "<group>"; };
+		3EB4BEA91B78AC8E001BCAD5 /* ARSegmentPageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentPageHeader.m; sourceTree = "<group>"; };
+		3EB4BEAA1B78AC8E001BCAD5 /* ARSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentView.h; sourceTree = "<group>"; };
+		3EB4BEAB1B78AC8E001BCAD5 /* ARSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentView.m; sourceTree = "<group>"; };
+		3EB4BEAF1B78AD20001BCAD5 /* ARSegmentPageControllerHeaderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageControllerHeaderProtocol.h; sourceTree = "<group>"; };
+		3EB4BEB01B78AF6F001BCAD5 /* listdownload.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = listdownload.jpg; sourceTree = "<group>"; };
+		3EB4BEB21B78B2CA001BCAD5 /* RFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegmentView.h; sourceTree = "<group>"; };
+		3EB4BEB31B78B2CA001BCAD5 /* RFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegmentView.m; sourceTree = "<group>"; };
 		3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		3EC55CFE1B73F315009B82AF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -203,14 +211,14 @@
 		3EB4BE981B774286001BCAD5 /* ARSegmentPageController */ = {
 			isa = PBXGroup;
 			children = (
-				3EB4BE8D1B77427D001BCAD5 /* ARSegmentControllerDelegate.h */,
-				3EB4BE8E1B77427D001BCAD5 /* ARSegmentPageController.h */,
-				3EB4BE8F1B77427D001BCAD5 /* ARSegmentPageController.m */,
-				3EB4BE901B77427D001BCAD5 /* ARSegmentPageControllerHeaderProtocol.h */,
-				3EB4BE911B77427D001BCAD5 /* ARSegmentPageHeader.h */,
-				3EB4BE921B77427D001BCAD5 /* ARSegmentPageHeader.m */,
-				3EB4BE931B77427D001BCAD5 /* ARSegmentView.h */,
-				3EB4BE941B77427D001BCAD5 /* ARSegmentView.m */,
+				3EB4BEAF1B78AD20001BCAD5 /* ARSegmentPageControllerHeaderProtocol.h */,
+				3EB4BEA51B78AC8E001BCAD5 /* ARSegmentControllerDelegate.h */,
+				3EB4BEA61B78AC8E001BCAD5 /* ARSegmentPageController.h */,
+				3EB4BEA71B78AC8E001BCAD5 /* ARSegmentPageController.m */,
+				3EB4BEA81B78AC8E001BCAD5 /* ARSegmentPageHeader.h */,
+				3EB4BEA91B78AC8E001BCAD5 /* ARSegmentPageHeader.m */,
+				3EB4BEAA1B78AC8E001BCAD5 /* ARSegmentView.h */,
+				3EB4BEAB1B78AC8E001BCAD5 /* ARSegmentView.m */,
 			);
 			name = ARSegmentPageController;
 			sourceTree = "<group>";
@@ -253,6 +261,10 @@
 				3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */,
 				3EC55CF91B72E22C009B82AF /* MenuTableViewController.h */,
 				3EC55CFA1B72E22C009B82AF /* MenuTableViewController.m */,
+				3EB4BE9C1B78A4D1001BCAD5 /* NavigationViewController.h */,
+				3EB4BE9D1B78A4D1001BCAD5 /* NavigationViewController.m */,
+				3EB4BEB21B78B2CA001BCAD5 /* RFSegmentView.h */,
+				3EB4BEB31B78B2CA001BCAD5 /* RFSegmentView.m */,
 				3EB4BE981B774286001BCAD5 /* ARSegmentPageController */,
 				3EC55CF81B72DEEB009B82AF /* CrumbPath */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
@@ -266,6 +278,7 @@
 				3EFBC5871B7182410072F774 /* Main.storyboard */,
 				3EC55D011B7539E0009B82AF /* ScrollDetailViewController.h */,
 				3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */,
+				3EB4BEB01B78AF6F001BCAD5 /* listdownload.jpg */,
 				3EFBC5B31B71CC8F0072F774 /* Fonts */,
 				3E1246D61B6F760E00DCBAC6 /* Overlay */,
 				3EDEE1FD1B6AF5C700459E77 /* PNChart */,
@@ -445,6 +458,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB4BEB11B78AF6F001BCAD5 /* listdownload.jpg in Resources */,
 				3EFBC5B71B71F03B0072F774 /* emPowerBolt.png in Resources */,
 				3EFBC5AE1B71CC870072F774 /* OpenSans-Light.ttf in Resources */,
 				3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */,
@@ -482,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB4BEB41B78B2CA001BCAD5 /* RFSegmentView.m in Sources */,
 				3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */,
 				3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */,
 				3EDEE1CC1B6AF59800459E77 /* BTGlassScrollView.m in Sources */,
@@ -490,26 +505,27 @@
 				3E1246D41B6F760000DCBAC6 /* CrumbPath.m in Sources */,
 				3EDEE1F01B6AF5BF00459E77 /* PNChartLabel.m in Sources */,
 				3EDEE1F91B6AF5BF00459E77 /* PNScatterChartData.m in Sources */,
+				3EB4BEAD1B78AC8E001BCAD5 /* ARSegmentPageHeader.m in Sources */,
 				3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */,
 				3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */,
 				3EDEE1FB1B6AF5BF00459E77 /* PNPieChart.m in Sources */,
+				3EB4BEAC1B78AC8E001BCAD5 /* ARSegmentPageController.m in Sources */,
 				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,
 				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
 				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
 				3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */,
 				3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */,
+				3EB4BEAE1B78AC8E001BCAD5 /* ARSegmentView.m in Sources */,
 				3EDEE1F31B6AF5BF00459E77 /* PNGenericChart.m in Sources */,
 				3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */,
 				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
 				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,
 				3EC55D031B7539E0009B82AF /* ScrollDetailViewController.m in Sources */,
-				3EB4BE951B77427D001BCAD5 /* ARSegmentPageController.m in Sources */,
 				3EDEE1F81B6AF5BF00459E77 /* PNScatterChart.m in Sources */,
 				3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */,
+				3EB4BE9E1B78A4D1001BCAD5 /* NavigationViewController.m in Sources */,
 				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
-				3EB4BE961B77427D001BCAD5 /* ARSegmentPageHeader.m in Sources */,
 				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,
-				3EB4BE971B77427D001BCAD5 /* ARSegmentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

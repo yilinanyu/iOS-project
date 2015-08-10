@@ -15,16 +15,25 @@
 #import "CrumbPath.h"
 #import "CrumbPathRenderer.h"
 #import "AppDelegate.h"
-
+#import "ARSegmentPageController.h"
 #import "MenuTableViewController.h"
 #import "ScrollDetailViewController.h"
-@interface BTGlassScrollViewController()<MKMapViewDelegate,CLLocationManagerDelegate>
+#import "UIImage+ImageEffects.h"
+#import "RFSegmentView.h"
+
+
+
+@interface BTGlassScrollViewController()<ARSegmentControllerDelegate,MKMapViewDelegate,CLLocationManagerDelegate>
 {
     BOOL contain;
     CGPoint startPoint;
     CGPoint originPoint;
     
 }
+
+@property (nonatomic, strong) UIImage *defaultImage;
+@property (nonatomic, strong) UIImage *blurImage;
+@property (nonatomic, strong) ARSegmentPageController *pager;
 @property (nonatomic, strong) CrumbPath *crumbs;
 @property (nonatomic, strong) CrumbPathRenderer *crumbPathRenderer;
 @property (nonatomic, strong) MKPolygonRenderer *drawingAreaRenderer;   // shown if kDebugShowArea is set to 1
@@ -85,6 +94,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.defaultImage = [UIImage imageNamed:@"background3.jpg"];
+    self.blurImage = [[UIImage imageNamed:@"background3.jpg"] applyDarkEffect];
+    
+   
+    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
+    
+    ARSegmentPageController *pager = [[ARSegmentPageController alloc] init];
+    [pager setViewControllers:@[sc]];
+
+    pager.freezenHeaderWhenReachMaxHeaderHeight = YES;
+    pager.segmentMiniTopInset = 64;
+    self.pager = pager;
+    [self.pager addObserver:self forKeyPath:@"segmentToInset" options:NSKeyValueObservingOptionNew context:NULL];
+    
+
+
 
     
     UIImage *image = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -92,7 +118,9 @@
     self.navigationItem.leftBarButtonItem = aButton;
     
     UIImage *image2 = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:image2 style:UIBarButtonItemStylePlain target:self action:@selector(bbbtnClicked:)];
+   
     self.navigationItem.rightBarButtonItem = rightButton;
     
     
@@ -142,12 +170,56 @@
      self.navigationItem.titleView = logoView;
 }
 
+
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    CGFloat topInset = [change[NSKeyValueChangeNewKey] floatValue];
+  
+    RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
+     [self.pager.headerView.imageView addSubview:segmentView];
+    
+    
+    if (topInset <= self.pager.segmentMiniTopInset) {
+        self.pager.title = @"Step Goal";
+        self.pager.headerView.imageView.image = self.blurImage;
+        [segmentView removeFromSuperview];
+    }else{
+        self.pager.title = nil;
+        self.pager.title = @"Step Goal";
+        self.pager.headerView.imageView.image = self.defaultImage;
+      
+        
+       
+        
+    }
+}
+- (UIColor *)getRandomColor
+{
+    UIColor *color = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+    return color;
+}
+
+-(NSString *)segmentTitle
+{
+    return @"common";
+}
+
+
+
 // right menu button function
 - (IBAction)bbbtnClicked:(id)sender {
+
     
     
-    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
-    [self.navigationController pushViewController:sc animated:YES];
+//    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
+    [self.navigationController pushViewController:self.pager animated:YES];
+//    [self.navigationController pushViewController:sc animated:YES];
 }
 
 

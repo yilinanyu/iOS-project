@@ -28,7 +28,7 @@
 -(void)_baseConfigs
 {
     self.imageView = [[UIImageView alloc] init];
-    self.imageView.image = [UIImage imageNamed:@"listdownload.jpg"];
+    self.imageView.image = [UIImage imageNamed:@"background2.jpg"];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.clipsToBounds = YES;
     [self addSubview:self.imageView];
