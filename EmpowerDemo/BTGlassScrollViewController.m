@@ -39,7 +39,9 @@
 @property (nonatomic, strong) MKPolygonRenderer *drawingAreaRenderer;   // shown if kDebugShowArea is set to 1
 @property (strong , nonatomic) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSTimer *myTimer;
+@property (nonatomic,strong) PNLineChart*lineChart;
 @end
+
 
 @implementation BTGlassScrollViewController
 @synthesize label1;
@@ -177,28 +179,7 @@
     return UIStatusBarStyleLightContent;
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    CGFloat topInset = [change[NSKeyValueChangeNewKey] floatValue];
-  
-    RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
-     [self.pager.headerView.imageView addSubview:segmentView];
-    
-    
-    if (topInset <= self.pager.segmentMiniTopInset) {
-        self.pager.title = @"Step Goal";
-        self.pager.headerView.imageView.image = self.blurImage;
-        [segmentView removeFromSuperview];
-    }else{
-        self.pager.title = nil;
-        self.pager.title = @"Step Goal";
-        self.pager.headerView.imageView.image = self.defaultImage;
-      
-        
-       
-        
-    }
-}
+
 - (UIColor *)getRandomColor
 {
     UIColor *color = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
@@ -477,6 +458,25 @@
 //        [self.navigationController pushViewController:controler animated:YES];
 //    }
 //}
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    CGFloat topInset = [change[NSKeyValueChangeNewKey] floatValue];
+    
+    RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
+    [self.pager.headerView.imageView addSubview:segmentView];
+    [self.pager.headerView.imageView addSubview:_lineChart];
+    
+    
+    if (topInset <= self.pager.segmentMiniTopInset) {
+        self.pager.title = @"Step Goal";
+        self.pager.headerView.imageView.image = self.blurImage;
+        [segmentView removeFromSuperview];
+        
+    }else{
+        self.pager.title = nil;
+        self.pager.headerView.imageView.image = self.defaultImage;
+    }
+}
 
 
 #pragma mark - MapKit
