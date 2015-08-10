@@ -47,8 +47,8 @@
     self.backgroundColor = [UIColor whiteColor];
     self.clipsToBounds   = YES;
     _showLabel           = YES;
-    _barBackgroundColor  = PNLightGrey;
-    _labelTextColor      = [UIColor grayColor];
+    _barBackgroundColor  = PNWhite;
+    _labelTextColor      = [UIColor whiteColor];
     _labelFont           = [UIFont systemFontOfSize:11.0f];
     _xChartLabels        = [NSMutableArray array];
     _yChartLabels        = [NSMutableArray array];
@@ -120,7 +120,7 @@
     label.textColor = _labelTextColor;
     [label setTextAlignment:NSTextAlignmentRight];
     label.text = [NSString stringWithFormat:@"%@%@%@", _yLabelPrefix, labelText, _yLabelSuffix];
-    [self addSubview:label];
+//    [self addSubview:label];
     
     [_yChartLabels addObject:label];
   }
@@ -181,7 +181,7 @@
                 labelAddCount = 0;
                 
                 [_xChartLabels addObject:label];
-                [self addSubview:label];
+//                [self addSubview:label];
             }
         }
     }

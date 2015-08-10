@@ -20,6 +20,7 @@
 #import "ScrollDetailViewController.h"
 #import "UIImage+ImageEffects.h"
 #import "RFSegmentView.h"
+#import "PNCircleChart.h"
 
 
 
@@ -28,6 +29,7 @@
     BOOL contain;
     CGPoint startPoint;
     CGPoint originPoint;
+    PNCircleChart* circleChart;
     
 }
 
@@ -40,6 +42,8 @@
 @property (strong , nonatomic) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSTimer *myTimer;
 @property (nonatomic,strong) PNLineChart*lineChart;
+@property (nonatomic,strong) PNCircleChart * circleChart;
+@property (nonatomic,strong) RFSegmentView* segmentView;
 @end
 
 
@@ -47,6 +51,8 @@
 @synthesize label1;
 @synthesize mapView;
 @synthesize locationManager;
+@synthesize lineChart;
+@synthesize circleChart;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 
 {
@@ -97,8 +103,13 @@
 {
     [super viewDidLoad];
     
-    self.defaultImage = [UIImage imageNamed:@"background2.jpg"];
-    self.blurImage = [[UIImage imageNamed:@"background2.jpg"] applyDarkEffect];
+    
+    
+    
+    
+    
+    self.defaultImage = [UIImage imageNamed:@"background3.jpg"];
+    self.blurImage = [[UIImage imageNamed:@"background3.jpg"] applyDarkEffect];
     
    
     ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
@@ -111,10 +122,7 @@
     self.pager = pager;
     [self.pager addObserver:self forKeyPath:@"segmentToInset" options:NSKeyValueObservingOptionNew context:NULL];
     
-
-
-
-    
+   
     UIImage *image = [[UIImage imageNamed:@"menuButton.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *aButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(btnClicked:)];
     self.navigationItem.leftBarButtonItem = aButton;
@@ -366,7 +374,7 @@
     self.locationManager.distanceFilter= 10.0;
     
     //For Line Chart
-    PNLineChart * lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(8,5,290,85)];//(0, 0,310, 96)]; !!!!!
+    lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(8,5,290,85)];//(0, 0,310, 96)]; !!!!!
     [lineChart setXLabels:@[@"12am",@"6pm",@"12pm",@"6pm",@"12am"]];//@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]]; !!!!!
     NSArray * data01Array = @[@60.1, @160.1, @126.4, @262.2, @186.2];
     PNLineChartData *data01 = [PNLineChartData new];
@@ -461,21 +469,34 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     CGFloat topInset = [change[NSKeyValueChangeNewKey] floatValue];
-    
-    RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
+ 
+     RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
     [self.pager.headerView.imageView addSubview:segmentView];
-    [self.pager.headerView.imageView addSubview:_lineChart];
     
+    
+    
+    
+    //For BarC hart
+    PNBarChart * barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 100.0)];
+    [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+    [barChart setYValues:@[@1,  @10, @2, @6, @3]];
+    [barChart strokeChart];
+    [barChart setStrokeColor:PNWhite];
+     barChart.backgroundColor = [UIColor clearColor];
+    
+    [self.pager.headerView.imageView addSubview:barChart];
+
     
     if (topInset <= self.pager.segmentMiniTopInset) {
         self.pager.title = @"Step Goal";
         self.pager.headerView.imageView.image = self.blurImage;
-        [segmentView removeFromSuperview];
+        [_segmentView removeFromSuperview];
         
     }else{
         self.pager.title = nil;
         self.pager.headerView.imageView.image = self.defaultImage;
     }
+    
 }
 
 
