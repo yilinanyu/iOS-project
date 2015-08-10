@@ -73,6 +73,12 @@
     if (_isSelected) {
         self.titleLabel.textColor = self.norColor;
         self.backgroundColor = self.selColor;
+        
+        
+        
+        
+        
+        
     }
     else
     {

@@ -472,7 +472,7 @@
  
      RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
     segmentView.delegate = self;
-    [self.pager.headerView.imageView addSubview:segmentView];
+    [self.pager.headerView addSubview:segmentView];
     
     
     
