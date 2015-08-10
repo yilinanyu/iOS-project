@@ -471,6 +471,7 @@
     CGFloat topInset = [change[NSKeyValueChangeNewKey] floatValue];
  
      RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
+    segmentView.delegate = self;
     [self.pager.headerView.imageView addSubview:segmentView];
     
     
@@ -485,11 +486,11 @@
     
     [self.pager.headerView.imageView addSubview:barChart];
    
-    
-    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNRed],
-                       [PNPieChartDataItem dataItemWithValue:20 color:PNBlue description:@"WWDC"],
-                       [PNPieChartDataItem dataItemWithValue:40 color:PNGreen description:@"GOOL I/O"],
-                       ];
+//    
+//    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNRed],
+//                       [PNPieChartDataItem dataItemWithValue:20 color:PNBlue description:@"WWDC"],
+//                       [PNPieChartDataItem dataItemWithValue:40 color:PNGreen description:@"GOOL I/O"],
+//                       ];
     
     
 //    
@@ -520,6 +521,10 @@
         self.pager.headerView.imageView.image = self.defaultImage;
     }
     
+}
+- (void)segmentViewSelectIndex:(NSInteger)index
+{
+    NSLog(@"current index is %d",index);
 }
 
 

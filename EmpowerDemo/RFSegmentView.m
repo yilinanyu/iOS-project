@@ -63,7 +63,7 @@
             self.titleLabel.textColor = self.selColor;
             self.backgroundColor = self.norColor;
         }
-
+        
     }
 }
 
