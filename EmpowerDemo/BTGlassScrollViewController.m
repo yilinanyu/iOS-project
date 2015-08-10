@@ -477,7 +477,7 @@
     
     
     //For Bar Chart
-    PNBarChart * barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 100.0)];
+    PNBarChart * barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 220, SCREEN_WIDTH, 100.0)];
     [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
     [barChart setYValues:@[@1,  @10, @2, @6, @3]];
     [barChart strokeChart];
@@ -492,24 +492,22 @@
                        ];
     
     
-    
-    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(100, 110, 100, 100) items:items];
-    pieChart.descriptionTextColor = [UIColor whiteColor];
-    pieChart.descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:6.0];
-    [pieChart strokeChart];
-    [self.pager.headerView.imageView addSubview:pieChart];
+//    
+//    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(100, 110, 100, 100) items:items];
+//    pieChart.descriptionTextColor = [UIColor whiteColor];
+//    pieChart.descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:6.0];
+//    [pieChart strokeChart];
+//    [self.pager.headerView.imageView addSubview:pieChart];
 
     
+    //circle chart
+    circleChart = [[PNCircleChart alloc] initWithFrame:CGRectMake(0, 60, SCREEN_WIDTH, 100.0) andTotal:[NSNumber numberWithInt:100] andCurrent:[NSNumber numberWithInt:60] andClockwise:NO];
+    circleChart.backgroundColor = [UIColor clearColor];
+    [circleChart setStrokeColor:PNGreen];
+    [circleChart strokeChart];
+     [self.pager.headerView.imageView addSubview:circleChart];
     
-//    // for circle chart
-//    
-//    circleChart = [[PNCircleChart alloc]
-//                                   initWithFrame:CGRectMake(0, 100.0, SCREEN_WIDTH, 100.0)];
-//    circleChart.backgroundColor = [UIColor clearColor];
-//    [circleChart setStrokeColor:PNGreen];
-//    [circleChart strokeChart];
-//    [barChart addSubview:circleChart];
-//    
+    
 
     
     if (topInset <= self.pager.segmentMiniTopInset) {
