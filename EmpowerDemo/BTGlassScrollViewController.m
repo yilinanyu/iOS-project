@@ -30,6 +30,8 @@
     CGPoint startPoint;
     CGPoint originPoint;
     PNCircleChart* circleChart;
+    PNBarChart * barChart;
+    
     
 }
 
@@ -43,6 +45,8 @@
 @property (nonatomic, strong) NSTimer *myTimer;
 @property (nonatomic,strong) PNLineChart*lineChart;
 @property (nonatomic,strong) PNCircleChart * circleChart;
+
+@property (nonatomic,strong) PNBarChart * barChart;
 @property (nonatomic,strong) RFSegmentView* segmentView;
 @end
 
@@ -75,6 +79,7 @@
         [self.view addSubview:_glassScrollView];
         
         
+        
     }
     self.myTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateUI:) userInfo:nil repeats:YES];
     
@@ -92,7 +97,7 @@
 
     
     //For Bar Chart
-    PNBarChart * barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 220, SCREEN_WIDTH, 100.0)];
+    barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 220, SCREEN_WIDTH, 100.0)];
     [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
     [barChart setYValues:@[@1,  @10, @2, @6, @3]];
     [barChart strokeChart];
@@ -191,7 +196,8 @@
     
     self.defaultImage = [UIImage imageNamed:@"background3.jpg"];
     self.blurImage = [[UIImage imageNamed:@"background3.jpg"] applyDarkEffect];
-    
+
+
    
     ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
     
@@ -554,6 +560,24 @@
      RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
     segmentView.delegate = self;
     [self.pager.headerView addSubview:segmentView];
+    
+    
+    //circle chart
+    circleChart = [[PNCircleChart alloc] initWithFrame:CGRectMake(0, 60, SCREEN_WIDTH, 100.0) andTotal:[NSNumber numberWithInt:100] andCurrent:[NSNumber numberWithInt:60] andClockwise:NO];
+    circleChart.backgroundColor = [UIColor clearColor];
+    [circleChart setStrokeColor:PNGreen];
+    [circleChart strokeChart];
+    
+    
+    //For Bar Chart
+    barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 220, SCREEN_WIDTH, 100.0)];
+    [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+    [barChart setYValues:@[@1,  @10, @2, @6, @3]];
+    [barChart strokeChart];
+    barChart.backgroundColor = [UIColor clearColor];
+    [self.pager.headerView.imageView addSubview:circleChart];
+    [self.pager.headerView.imageView addSubview:barChart];
+
     
     if (topInset <= self.pager.segmentMiniTopInset) {
         self.pager.title = @"Step Goal";
