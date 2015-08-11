@@ -575,9 +575,7 @@
     [barChart setYValues:@[@1,  @10, @2, @6, @3]];
     [barChart strokeChart];
     barChart.backgroundColor = [UIColor clearColor];
-    [self.pager.headerView.imageView addSubview:circleChart];
-    [self.pager.headerView.imageView addSubview:barChart];
-
+    
     
     if (topInset <= self.pager.segmentMiniTopInset) {
         self.pager.title = @"Step Goal";
@@ -587,6 +585,9 @@
     }else{
         self.pager.title = nil;
         self.pager.headerView.imageView.image = self.defaultImage;
+        [self.pager.headerView.imageView addSubview:circleChart];
+        [self.pager.headerView.imageView addSubview:barChart];
+
     }
     
 }
