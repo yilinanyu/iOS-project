@@ -115,14 +115,36 @@
 // 
     
 //    NSArray* subViews = self.pager.headerView.imageView.subviews;
-//    
+//
+    //For Line Chart
+    lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0,180,SCREEN_WIDTH,100.0)];//(0, 0,310, 96)]; !!!!!
+    [lineChart setXLabels:@[@"12am",@"6pm",@"12pm",@"6pm",@"12am"]];//@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]]; !!!!!
+    NSArray * data01Array = @[@60.1, @160.1, @126.4, @262.2, @186.2];
+    PNLineChartData *data01 = [PNLineChartData new];
+    data01.color = [UIColor whiteColor];//PNFreshGreen;
+    data01.itemCount = lineChart.xLabels.count;
+    data01.getData = ^(NSUInteger index) {
+        CGFloat yValue = [data01Array[index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    
+    lineChart.chartData = @[data01];//, data02]; !!!!!
+    [lineChart strokeChart];
+    
+    
+    
+    NSArray *viewsToRemove = [self.pager.headerView.imageView subviews];
+    for (UIView *v in viewsToRemove) {
+        [v removeFromSuperview];
+    }
 
+    
     if (index==0)
 
     {
          [pieChart setHidden:YES];
-         [self.pager.headerView addSubview:circleChart];
-         [self.pager.headerView addSubview:barChart];
+         [self.pager.headerView.imageView addSubview:circleChart];
+         [self.pager.headerView.imageView addSubview:barChart];
         
        
     }
@@ -135,12 +157,12 @@
 //            NSLog(@"asdasdhsahdaisudhasiduhasiduhas");
 //        }
         [circleChart setHidden:YES];
-        [self.pager.headerView addSubview:pieChart];
+        [self.pager.headerView.imageView addSubview:pieChart];
         
     }
     else if(index==2)
     {
-        
+          [self.pager.headerView.imageView addSubview:lineChart];
     }
 }
 
@@ -532,52 +554,6 @@
      RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
     segmentView.delegate = self;
     [self.pager.headerView addSubview:segmentView];
-//
-//    //For Bar Chart
-//    PNBarChart * barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 220, SCREEN_WIDTH, 100.0)];
-//    [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-//    [barChart setYValues:@[@1,  @10, @2, @6, @3]];
-//    [barChart strokeChart];
-//     barChart.backgroundColor = [UIColor clearColor];
-//    
-////    [self.pager.headerView.imageView addSubview:barChart];
-//   
-//    
-//    NSArray *items = @[[PNPieChartDataItem dataItemWithValue:10 color:PNRed],
-//                       [PNPieChartDataItem dataItemWithValue:20 color:PNBlue description:@"WWDC"],
-//                       [PNPieChartDataItem dataItemWithValue:40 color:PNGreen description:@"GOOL I/O"],
-//                       ];
-//    
-//    
-//    
-//    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(100, 110, 100, 100) items:items];
-//    pieChart.descriptionTextColor = [UIColor whiteColor];
-//    pieChart.descriptionTextFont  = [UIFont fontWithName:@"Avenir-Medium" size:6.0];
-//    [pieChart strokeChart];
-//
-//    
-//    //circle chart
-//    circleChart = [[PNCircleChart alloc] initWithFrame:CGRectMake(0, 60, SCREEN_WIDTH, 100.0) andTotal:[NSNumber numberWithInt:100] andCurrent:[NSNumber numberWithInt:60] andClockwise:NO];
-//    circleChart.backgroundColor = [UIColor clearColor];
-//    [circleChart setStrokeColor:PNGreen];
-//    [circleChart strokeChart];
-//    
-// 
-//
-//    if (index==0)
-//    {         [self.pager.headerView.imageView addSubview:barChart];
-//              [self.pager.headerView.imageView addSubview:circleChart];
-//    }
-//    else if(index==1)
-//    {          [self.pager.headerView.imageView addSubview:barChart];
-//               [self.pager.headerView.imageView addSubview:pieChart];
-//    
-//    }
-//    else if(index==1)
-//    {
-//    }
-    
-
     
     if (topInset <= self.pager.segmentMiniTopInset) {
         self.pager.title = @"Step Goal";
