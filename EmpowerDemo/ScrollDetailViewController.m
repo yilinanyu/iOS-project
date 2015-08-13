@@ -63,8 +63,8 @@
     // define scroll view
     self.scrollView=[[UIScrollView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height)];
     
-    self.scrollView.contentSize=CGSizeMake(320,758);
-    
+    self.scrollView.contentSize=CGSizeMake(320,0);
+//    
     // define page controll
     
     
@@ -76,7 +76,7 @@
     
     
     
-    self.navigationItem.title = @"Step Goal";
+//    self.navigationItem.title = @"Step Goal";
     
 }
 

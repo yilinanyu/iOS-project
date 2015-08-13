@@ -19,6 +19,15 @@
 		3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFF1B73F315009B82AF /* DetailViewController.m */; };
 		3EC55D031B7539E0009B82AF /* ScrollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */; };
 		3EC55D051B753C6A009B82AF /* moon_challenge copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC55D041B753C6A009B82AF /* moon_challenge copy.png */; };
+		3ED58CF61B7BFFA200FC0060 /* CustomHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */; };
+		3ED58CF71B7BFFA200FC0060 /* CustomHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CF41B7BFFA200FC0060 /* CustomHeader.m */; };
+		3ED58CF81B7BFFA200FC0060 /* CustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED58CF51B7BFFA200FC0060 /* CustomHeader.xib */; };
+		3ED58CFC1B7C019200FC0060 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CFA1B7C019200FC0060 /* CollectionViewController.m */; };
+		3ED58CFD1B7C019200FC0060 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED58CFB1B7C019200FC0060 /* CollectionViewController.xib */; };
+		3ED58D011B7C048700FC0060 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CFF1B7C048700FC0060 /* ViewController.m */; };
+		3ED58D021B7C048700FC0060 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED58D001B7C048700FC0060 /* ViewController.xib */; };
+		3ED58D051B7C049300FC0060 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58D041B7C049300FC0060 /* FXPageControl.m */; };
+		3ED58D071B7C182D00FC0060 /* Background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED58D061B7C182D00FC0060 /* Background3.png */; };
 		3EDEE1A21B6AF4C900459E77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A11B6AF4C900459E77 /* main.m */; };
 		3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A41B6AF4C900459E77 /* AppDelegate.m */; };
 		3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEE1A71B6AF4C900459E77 /* BTGlassScrollViewController.m */; };
@@ -102,6 +111,20 @@
 		3EC55D011B7539E0009B82AF /* ScrollDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollDetailViewController.h; sourceTree = "<group>"; };
 		3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollDetailViewController.m; sourceTree = "<group>"; };
 		3EC55D041B753C6A009B82AF /* moon_challenge copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moon_challenge copy.png"; sourceTree = "<group>"; };
+		3ED58CF11B7BFFA200FC0060 /* CustomHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderViewController.h; sourceTree = "<group>"; };
+		3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderViewController.m; sourceTree = "<group>"; };
+		3ED58CF31B7BFFA200FC0060 /* CustomHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeader.h; sourceTree = "<group>"; };
+		3ED58CF41B7BFFA200FC0060 /* CustomHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeader.m; sourceTree = "<group>"; };
+		3ED58CF51B7BFFA200FC0060 /* CustomHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeader.xib; sourceTree = "<group>"; };
+		3ED58CF91B7C019200FC0060 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		3ED58CFA1B7C019200FC0060 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		3ED58CFB1B7C019200FC0060 /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
+		3ED58CFE1B7C048700FC0060 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3ED58CFF1B7C048700FC0060 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3ED58D001B7C048700FC0060 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		3ED58D031B7C049300FC0060 /* FXPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXPageControl.h; sourceTree = "<group>"; };
+		3ED58D041B7C049300FC0060 /* FXPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXPageControl.m; sourceTree = "<group>"; };
+		3ED58D061B7C182D00FC0060 /* Background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background3.png; sourceTree = "<group>"; };
 		3EDEE19C1B6AF4C900459E77 /* EmpowerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpowerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EDEE1A01B6AF4C900459E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDEE1A11B6AF4C900459E77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -219,6 +242,8 @@
 				3EB4BEA91B78AC8E001BCAD5 /* ARSegmentPageHeader.m */,
 				3EB4BEAA1B78AC8E001BCAD5 /* ARSegmentView.h */,
 				3EB4BEAB1B78AC8E001BCAD5 /* ARSegmentView.m */,
+				3ED58D031B7C049300FC0060 /* FXPageControl.h */,
+				3ED58D041B7C049300FC0060 /* FXPageControl.m */,
 			);
 			name = ARSegmentPageController;
 			sourceTree = "<group>";
@@ -265,6 +290,11 @@
 				3EB4BE9D1B78A4D1001BCAD5 /* NavigationViewController.m */,
 				3EB4BEB21B78B2CA001BCAD5 /* RFSegmentView.h */,
 				3EB4BEB31B78B2CA001BCAD5 /* RFSegmentView.m */,
+				3ED58CF11B7BFFA200FC0060 /* CustomHeaderViewController.h */,
+				3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */,
+				3ED58CF31B7BFFA200FC0060 /* CustomHeader.h */,
+				3ED58CF41B7BFFA200FC0060 /* CustomHeader.m */,
+				3ED58CF51B7BFFA200FC0060 /* CustomHeader.xib */,
 				3EB4BE981B774286001BCAD5 /* ARSegmentPageController */,
 				3EC55CF81B72DEEB009B82AF /* CrumbPath */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
@@ -275,9 +305,16 @@
 				3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */,
 				3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */,
 				3EDEE1CB1B6AF59800459E77 /* UIImage+ImageEffects.m */,
+				3ED58CF91B7C019200FC0060 /* CollectionViewController.h */,
+				3ED58CFA1B7C019200FC0060 /* CollectionViewController.m */,
+				3ED58CFB1B7C019200FC0060 /* CollectionViewController.xib */,
 				3EFBC5871B7182410072F774 /* Main.storyboard */,
 				3EC55D011B7539E0009B82AF /* ScrollDetailViewController.h */,
 				3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */,
+				3ED58CFE1B7C048700FC0060 /* ViewController.h */,
+				3ED58CFF1B7C048700FC0060 /* ViewController.m */,
+				3ED58D001B7C048700FC0060 /* ViewController.xib */,
+				3ED58D061B7C182D00FC0060 /* Background3.png */,
 				3EB4BEB01B78AF6F001BCAD5 /* listdownload.jpg */,
 				3EFBC5B31B71CC8F0072F774 /* Fonts */,
 				3E1246D61B6F760E00DCBAC6 /* Overlay */,
@@ -461,11 +498,14 @@
 				3EB4BEB11B78AF6F001BCAD5 /* listdownload.jpg in Resources */,
 				3EFBC5B71B71F03B0072F774 /* emPowerBolt.png in Resources */,
 				3EFBC5AE1B71CC870072F774 /* OpenSans-Light.ttf in Resources */,
+				3ED58CFD1B7C019200FC0060 /* CollectionViewController.xib in Resources */,
 				3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */,
 				3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */,
 				3EFBC5AF1B71CC870072F774 /* OpenSans-LightItalic.ttf in Resources */,
 				3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */,
+				3ED58CF81B7BFFA200FC0060 /* CustomHeader.xib in Resources */,
 				3EFBC5B11B71CC870072F774 /* OpenSans-Semibold.ttf in Resources */,
+				3ED58D021B7C048700FC0060 /* ViewController.xib in Resources */,
 				3EFBC5B21B71CC870072F774 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				3EC55D051B753C6A009B82AF /* moon_challenge copy.png in Resources */,
 				3EFBC5A91B71CC870072F774 /* OpenSans-Bold.ttf in Resources */,
@@ -477,6 +517,7 @@
 				3EFBC5B01B71CC870072F774 /* OpenSans-Regular.ttf in Resources */,
 				3EFBC5881B7182410072F774 /* Main.storyboard in Resources */,
 				3EFBC5AD1B71CC870072F774 /* OpenSans-Italic.ttf in Resources */,
+				3ED58D071B7C182D00FC0060 /* Background3.png in Resources */,
 				3EFBC5AC1B71CC870072F774 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				3EFBC5AB1B71CC870072F774 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
@@ -496,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED58D011B7C048700FC0060 /* ViewController.m in Sources */,
 				3EB4BEB41B78B2CA001BCAD5 /* RFSegmentView.m in Sources */,
 				3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */,
 				3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */,
@@ -509,14 +551,18 @@
 				3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */,
 				3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */,
 				3EDEE1FB1B6AF5BF00459E77 /* PNPieChart.m in Sources */,
+				3ED58CF71B7BFFA200FC0060 /* CustomHeader.m in Sources */,
+				3ED58D051B7C049300FC0060 /* FXPageControl.m in Sources */,
 				3EB4BEAC1B78AC8E001BCAD5 /* ARSegmentPageController.m in Sources */,
 				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,
 				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
 				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
 				3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */,
 				3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */,
+				3ED58CFC1B7C019200FC0060 /* CollectionViewController.m in Sources */,
 				3EB4BEAE1B78AC8E001BCAD5 /* ARSegmentView.m in Sources */,
 				3EDEE1F31B6AF5BF00459E77 /* PNGenericChart.m in Sources */,
+				3ED58CF61B7BFFA200FC0060 /* CustomHeaderViewController.m in Sources */,
 				3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */,
 				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
 				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,

@@ -21,6 +21,7 @@
 #import "UIImage+ImageEffects.h"
 #import "RFSegmentView.h"
 #import "PNCircleChart.h"
+#import "CustomHeaderViewController.h"
 
 
 
@@ -220,38 +221,11 @@
    
     self.navigationItem.rightBarButtonItem = rightButton;
     
-    
-    //drawer controller
-//    SWRevealViewController *revealViewController = self.revealViewController;
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    MenuTableViewController *vc = [sb instantiateViewControllerWithIdentifier:@"MenuTableViewControllerID"];
-//    
-//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-//    [revealViewController setFrontViewController:navigationController animated:YES];
-//    
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     self.view.backgroundColor = [UIColor clearColor];
-    mapView.delegate =self;
-    
-    
-    
-//    // for memu bar controller
-//    self.title = NSLocalizedString(@"Front View", nil);
-//    
-//    SWRevealViewController *revealController = [self revealViewController];
-//    
-//    [revealController panGestureRecognizer];
-//    [revealController tapGestureRecognizer];
-
-    
-//    //Add an image to your project & set that image here.
-//    UIBarButtonItem *rightRevealButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menuButton.png"]style:UIBarButtonItemStyleBordered target:revealController action:@selector(rightRevealToggle:)];
-//    self.navigationItem.rightBarButtonItem = rightRevealButtonItem;
-    
+     mapView.delegate =self;
     
 
-   
-    
     UIImageView* logoView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
     UIImage *logoImage = [UIImage imageNamed:@"emPowerBolt.png"];
     
@@ -275,26 +249,15 @@
 }
 
 
-- (UIColor *)getRandomColor
-{
-    UIColor *color = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
-    return color;
-}
-
--(NSString *)segmentTitle
-{
-    return @"common";
-}
-
-
-
 // right menu button function
 - (IBAction)bbbtnClicked:(id)sender {
 
+    CustomHeaderViewController *customHeader = [[CustomHeaderViewController alloc] init];
     
+    [self.navigationController pushViewController:customHeader animated:YES];
     
 //    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
-    [self.navigationController pushViewController:self.pager animated:YES];
+//    [self.navigationController pushViewController:self.pager animated:YES];
 //    [self.navigationController pushViewController:sc animated:YES];
 }
 

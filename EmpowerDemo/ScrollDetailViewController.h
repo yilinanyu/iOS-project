@@ -11,7 +11,7 @@
 #import "ARSegmentPageController.h"
 #import "RFSegmentView.h"
 
-@interface ScrollDetailViewController : UIViewController <UIScrollViewDelegate>
+@interface ScrollDetailViewController : UIViewController <ARSegmentControllerDelegate,UIScrollViewDelegate>
 {
     UIPageControl *pageControl;
     BOOL pageControlBingUsed;
