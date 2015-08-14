@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ARSegmentControllerDelegate.h"
+#import "FXPageControl.h"
 
 @interface CollectionViewController : UICollectionViewController<ARSegmentControllerDelegate>
+@property (weak, nonatomic) UIScrollView *scrollView;
 
+@property (nonatomic, strong) FXPageControl *pageControl;
+
+@property (nonatomic, strong)  UIView *contentView;
+
+- (IBAction)pageControlAction:(FXPageControl *)sender;
 @end

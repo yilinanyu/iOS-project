@@ -27,7 +27,7 @@
 @property(nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, assign) int index;
 @property(nonatomic,strong) UIProgressView *progressBar;
-@property(retain,nonatomic) UIView *CustomViewt;
+@property(retain,nonatomic) UIView *CustomView;
 @property(retain,nonatomic) UIView *view1;
 @property(nonatomic, retain) UILabel *label1;
 @property (nonatomic, strong) BTGlassScrollView *glassScrollView;

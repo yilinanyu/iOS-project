@@ -7,6 +7,7 @@
 //
 
 #import "CollectionViewController.h"
+#import "FXPageControl.h"
 
 @interface CollectionViewController ()
 
@@ -18,6 +19,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,24 +58,78 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 10;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return 3;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    if (indexPath.row % 2 == 0) {
-        cell.backgroundColor = [UIColor orangeColor];
+    
+    UIScrollView*scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
+    scrollView.backgroundColor = [UIColor redColor];
+  
+    
+    self.scrollView.pagingEnabled = YES;
+    UIView* contentView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height)];
+    self.scrollView.contentSize = contentView.frame.size;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    [self.scrollView addSubview:contentView];
+    
+    
+    UIPageControl* pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 50, cell.frame.size.width, 50)];
+    [pageControl setNumberOfPages:4];
+    pageControl.defersCurrentPageDisplay = YES;
+
+    
+  if (indexPath.row == 0) {
+      [[cell contentView] addSubview:scrollView];
+      [[cell contentView] addSubview:pageControl];
+        
+        
     }else{
-        cell.backgroundColor = [UIColor whiteColor];
-    }
+      cell.backgroundColor = [UIColor whiteColor];
+     }
     
     return cell;
 }
+
+
+- (IBAction)pageControlAction:(FXPageControl *)sender
+{
+    //update scrollview when pagecontrol is tapped
+    //    if (sender == self.pageControl1)
+    //    {
+    CGPoint offset = CGPointMake(sender.currentPage * self.scrollView.bounds.size.width, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+    //    }
+    //    else
+    //    {
+    //        CGPoint offset = CGPointMake(sender.currentPage * self.scrollView2.bounds.size.width, 0);
+    //        [self.scrollView2 setContentOffset:offset animated:YES];
+    //    }
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //update page control when scrollview scrolls
+    //prevent flicker by only updating when page index has changed
+    NSInteger pageIndex = (NSInteger)(round(scrollView.contentOffset.x / scrollView.bounds.size.width));
+    if (scrollView == self.scrollView)
+    {
+      self.pageControl.currentPage = pageIndex;
+      self.pageControl.selectedDotColor = (pageIndex == 2)? [UIColor whiteColor]: [UIColor blackColor];
+     self.pageControl.dotColor = (pageIndex == 2)?
+        [UIColor colorWithWhite:1.0 alpha:0.25]: [UIColor colorWithWhite:0.0 alpha:0.25];
+    }
+    //    else
+    //    {
+    //        self.pageControl2.currentPage = pageIndex;
+    //    }
+}
+
 
 #pragma mark <UICollectionViewDelegate>
 

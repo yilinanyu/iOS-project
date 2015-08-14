@@ -12,6 +12,7 @@
 #import "ScrollDetailViewController.h"
 #import "CollectionViewController.h"
 #import "ViewController.h"
+#import "PNChart.h"
 
 void *CusomHeaderInsetObserver = &CusomHeaderInsetObserver;
 
@@ -19,14 +20,15 @@ void *CusomHeaderInsetObserver = &CusomHeaderInsetObserver;
 
 @end
 
+
 @implementation CustomHeaderViewController
 
 -(instancetype)init
 {
 //
 //    ScrollDetailViewController*collectionView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
-//    CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
-    ViewController *collectionView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
+//    ViewController *collectionView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     
     
 
@@ -43,8 +45,30 @@ void *CusomHeaderInsetObserver = &CusomHeaderInsetObserver;
 
 -(UIView<ARSegmentPageControllerHeaderProtocol> *)customHeaderView
 {
-    CustomHeader *view = [[[NSBundle mainBundle] loadNibNamed:@"CustomHeader" owner:nil options:nil] lastObject];
+    CustomHeader *view = [[UIView alloc] initWithFrame: CGRectMake(0, 0,280,280)];
+   self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background3.png"]];
     
+    RFSegmentView* segmentView = [[RFSegmentView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 60) items:@[@"spring",@"summer",@"autumn"]];
+    [view addSubview:segmentView];
+    
+    //circle chart
+    PNCircleChart*circleChart = [[PNCircleChart alloc] initWithFrame:CGRectMake(0, 60, SCREEN_WIDTH, 100.0) andTotal:[NSNumber numberWithInt:100] andCurrent:[NSNumber numberWithInt:60] andClockwise:NO];
+    circleChart.backgroundColor = [UIColor clearColor];
+    [circleChart setStrokeColor:PNGreen];
+    [circleChart strokeChart];
+    [view addSubview:circleChart];
+
+    
+    
+    //For Bar Chart
+    PNBarChart* barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(0, 220, SCREEN_WIDTH, 100.0)];
+    [barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+    [barChart setYValues:@[@1,  @10, @2, @6, @3]];
+    [barChart strokeChart];
+    barChart.backgroundColor = [UIColor clearColor];
+
+    [view addSubview:barChart];
+
     return view;
 }
 

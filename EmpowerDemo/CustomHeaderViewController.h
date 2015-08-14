@@ -9,5 +9,7 @@
 #import "ARSegmentPageController.h"
 
 @interface CustomHeaderViewController : ARSegmentPageController
+@property (weak, nonatomic) UIImageView *imageView;
+@property (nonatomic, assign) CGFloat segmentMiniTopInset;
 
 @end

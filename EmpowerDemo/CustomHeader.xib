@@ -7,12 +7,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomHeader">
-            <rect key="frame" x="0.0" y="0.0" width="341" height="213"/>
+            <rect key="frame" x="0.0" y="0.0" width="341" height="277"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background3.png" translatesAutoresizingMaskIntoConstraints="NO" id="vUQ-W0-89R">
+                    <rect key="frame" x="0.0" y="-8" width="341" height="401"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="559.5" y="365.5"/>
+            <connections>
+                <outlet property="imageView" destination="vUQ-W0-89R" id="q0Q-6A-liX"/>
+            </connections>
+            <point key="canvasLocation" x="559.5" y="397.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background3.png" width="640" height="1136"/>
+    </resources>
 </document>

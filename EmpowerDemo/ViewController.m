@@ -15,7 +15,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.mainscrollview.contentSize = CGSizeMake(self.mainscrollview.bounds.size.width, self.mainscrollview.bounds.size.height/1.7);
+
+    
+//    self.mainscrollview.contentSize = CGSizeMake(self.mainscrollview.bounds.size.width, self.mainscrollview.bounds.size.height);
     //set up first view
     self.scrollView1.pagingEnabled = YES;
     self.contentView1.frame = CGRectMake(0, 0, self.contentView1.bounds.size.width, self.scrollView1.bounds.size.height);
@@ -26,6 +28,7 @@
     self.pageControl1.defersCurrentPageDisplay = YES;
     [self.view addSubview:_scrollView1];
     [self.view addSubview:_pageControl1];
+    _mainscrollview.contentSize = CGSizeMake(290,1080);
     
 //    //set up second view
 //    self.scrollView2.pagingEnabled = YES;
@@ -86,5 +89,18 @@
 //        self.pageControl2.currentPage = pageIndex;
 //    }
 }
+//-(void)viewWillAppear:(BOOL)animated{
+//    float sizeOfContent = 0;
+//    int i;
+//    for (i = 0; i < [_mainscrollview.subviews count]; i++) {
+//        UIView *view =[_mainscrollview.subviews objectAtIndex:i];
+//        sizeOfContent += view.frame.size.height;
+//    }
+//    
+//    // Set content size for scroll view
+//    _mainscrollview.contentSize = CGSizeMake(_mainscrollview.frame.size.width, sizeOfContent*2);
+//
+//    
+//}
 
 @end

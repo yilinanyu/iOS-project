@@ -20,8 +20,6 @@
 		3EC55D031B7539E0009B82AF /* ScrollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */; };
 		3EC55D051B753C6A009B82AF /* moon_challenge copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC55D041B753C6A009B82AF /* moon_challenge copy.png */; };
 		3ED58CF61B7BFFA200FC0060 /* CustomHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */; };
-		3ED58CF71B7BFFA200FC0060 /* CustomHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CF41B7BFFA200FC0060 /* CustomHeader.m */; };
-		3ED58CF81B7BFFA200FC0060 /* CustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED58CF51B7BFFA200FC0060 /* CustomHeader.xib */; };
 		3ED58CFC1B7C019200FC0060 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CFA1B7C019200FC0060 /* CollectionViewController.m */; };
 		3ED58CFD1B7C019200FC0060 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED58CFB1B7C019200FC0060 /* CollectionViewController.xib */; };
 		3ED58D011B7C048700FC0060 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CFF1B7C048700FC0060 /* ViewController.m */; };
@@ -113,9 +111,6 @@
 		3EC55D041B753C6A009B82AF /* moon_challenge copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moon_challenge copy.png"; sourceTree = "<group>"; };
 		3ED58CF11B7BFFA200FC0060 /* CustomHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderViewController.h; sourceTree = "<group>"; };
 		3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderViewController.m; sourceTree = "<group>"; };
-		3ED58CF31B7BFFA200FC0060 /* CustomHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeader.h; sourceTree = "<group>"; };
-		3ED58CF41B7BFFA200FC0060 /* CustomHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeader.m; sourceTree = "<group>"; };
-		3ED58CF51B7BFFA200FC0060 /* CustomHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHeader.xib; sourceTree = "<group>"; };
 		3ED58CF91B7C019200FC0060 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		3ED58CFA1B7C019200FC0060 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		3ED58CFB1B7C019200FC0060 /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
@@ -292,9 +287,6 @@
 				3EB4BEB31B78B2CA001BCAD5 /* RFSegmentView.m */,
 				3ED58CF11B7BFFA200FC0060 /* CustomHeaderViewController.h */,
 				3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */,
-				3ED58CF31B7BFFA200FC0060 /* CustomHeader.h */,
-				3ED58CF41B7BFFA200FC0060 /* CustomHeader.m */,
-				3ED58CF51B7BFFA200FC0060 /* CustomHeader.xib */,
 				3EB4BE981B774286001BCAD5 /* ARSegmentPageController */,
 				3EC55CF81B72DEEB009B82AF /* CrumbPath */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
@@ -503,7 +495,6 @@
 				3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */,
 				3EFBC5AF1B71CC870072F774 /* OpenSans-LightItalic.ttf in Resources */,
 				3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */,
-				3ED58CF81B7BFFA200FC0060 /* CustomHeader.xib in Resources */,
 				3EFBC5B11B71CC870072F774 /* OpenSans-Semibold.ttf in Resources */,
 				3ED58D021B7C048700FC0060 /* ViewController.xib in Resources */,
 				3EFBC5B21B71CC870072F774 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -551,7 +542,6 @@
 				3EDEE1CD1B6AF59800459E77 /* UIImage+ImageEffects.m in Sources */,
 				3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */,
 				3EDEE1FB1B6AF5BF00459E77 /* PNPieChart.m in Sources */,
-				3ED58CF71B7BFFA200FC0060 /* CustomHeader.m in Sources */,
 				3ED58D051B7C049300FC0060 /* FXPageControl.m in Sources */,
 				3EB4BEAC1B78AC8E001BCAD5 /* ARSegmentPageController.m in Sources */,
 				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,

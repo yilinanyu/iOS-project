@@ -22,6 +22,7 @@
 #import "RFSegmentView.h"
 #import "PNCircleChart.h"
 #import "CustomHeaderViewController.h"
+#import "CollectionViewController.h"
 
 
 
@@ -198,12 +199,12 @@
     self.defaultImage = [UIImage imageNamed:@"background3.jpg"];
     self.blurImage = [[UIImage imageNamed:@"background3.jpg"] applyDarkEffect];
 
-
-   
-    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
+ CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
+//   
+//    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
     
     ARSegmentPageController *pager = [[ARSegmentPageController alloc] init];
-    [pager setViewControllers:@[sc]];
+    [pager setViewControllers:@[collectionView]];
 
     pager.freezenHeaderWhenReachMaxHeaderHeight = YES;
     pager.segmentMiniTopInset = 64;
@@ -251,13 +252,13 @@
 
 // right menu button function
 - (IBAction)bbbtnClicked:(id)sender {
-
-    CustomHeaderViewController *customHeader = [[CustomHeaderViewController alloc] init];
-    
-    [self.navigationController pushViewController:customHeader animated:YES];
+//
+//    CustomHeaderViewController *customHeader = [[CustomHeaderViewController alloc] init];
+//
+//    [self.navigationController pushViewController:customHeader animated:YES];
     
 //    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
-//    [self.navigationController pushViewController:self.pager animated:YES];
+    [self.navigationController pushViewController:self.pager animated:YES];
 //    [self.navigationController pushViewController:sc animated:YES];
 }
 
