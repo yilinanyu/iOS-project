@@ -26,6 +26,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView addGestureRecognizer:_scrollView.panGestureRecognizer];
+    self.collectionView.panGestureRecognizer.enabled = NO;
     
     // Do any additional setup after loading the view.
 }
@@ -70,11 +72,13 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     UIScrollView*scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
-    scrollView.backgroundColor = [UIColor redColor];
+    scrollView.backgroundColor = [UIColor clearColor];
+    scrollView.delegate = self;
   
     
     self.scrollView.pagingEnabled = YES;
-    UIView* contentView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.bounds.size.width, self.scrollView.bounds.size.height)];
+    UIView* contentView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.scrollView.bounds.size.width*3, self.scrollView.bounds.size.height)];
+    contentView.backgroundColor = [UIColor whiteColor];
     self.scrollView.contentSize = contentView.frame.size;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     [self.scrollView addSubview:contentView];
@@ -103,8 +107,8 @@ static NSString * const reuseIdentifier = @"Cell";
     //update scrollview when pagecontrol is tapped
     //    if (sender == self.pageControl1)
     //    {
-    CGPoint offset = CGPointMake(sender.currentPage * self.scrollView.bounds.size.width, 0);
-    [self.scrollView setContentOffset:offset animated:YES];
+//    CGPoint offset = CGPointMake(sender.currentPage * self.scrollView.bounds.size.width, 0);
+//    [self.scrollView setContentOffset:offset animated:YES];
     //    }
     //    else
     //    {
@@ -115,14 +119,17 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     //update page control when scrollview scrolls
-    //prevent flicker by only updating when page index has changed
-    NSInteger pageIndex = (NSInteger)(round(scrollView.contentOffset.x / scrollView.bounds.size.width));
+//    //prevent flicker by only updating when page index has changed
+//    NSInteger pageIndex = (NSInteger)(round(scrollView.contentOffset.x / scrollView.bounds.size.width));
     if (scrollView == self.scrollView)
     {
-      self.pageControl.currentPage = pageIndex;
-      self.pageControl.selectedDotColor = (pageIndex == 2)? [UIColor whiteColor]: [UIColor blackColor];
-     self.pageControl.dotColor = (pageIndex == 2)?
-        [UIColor colorWithWhite:1.0 alpha:0.25]: [UIColor colorWithWhite:0.0 alpha:0.25];
+        CGPoint contentOffset = scrollView.contentOffset;
+        contentOffset.x = contentOffset.x - self.collectionView.contentInset.left;
+        self.collectionView.contentOffset = contentOffset;
+//      self.pageControl.currentPage = pageIndex;
+//      self.pageControl.selectedDotColor = (pageIndex == 2)? [UIColor whiteColor]: [UIColor blackColor];
+//     self.pageControl.dotColor = (pageIndex == 2)?
+//        [UIColor colorWithWhite:1.0 alpha:0.25]: [UIColor colorWithWhite:0.0 alpha:0.25];
     }
     //    else
     //    {

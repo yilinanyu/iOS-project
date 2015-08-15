@@ -10,7 +10,7 @@
 #import "ARSegmentControllerDelegate.h"
 #import "FXPageControl.h"
 
-@interface CollectionViewController : UICollectionViewController<ARSegmentControllerDelegate>
+@interface CollectionViewController : UICollectionViewController<ARSegmentControllerDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) UIScrollView *scrollView;
 
 @property (nonatomic, strong) FXPageControl *pageControl;
