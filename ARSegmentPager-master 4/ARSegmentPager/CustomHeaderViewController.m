@@ -11,6 +11,7 @@
 #import "CollectionViewController.h"
 #import "UIImage+ImageEffects.h"
 #import "CustomHeader.h"
+#import "RootViewController.h"
 
 void *CusomHeaderInsetObserver = &CusomHeaderInsetObserver;
 
@@ -22,11 +23,12 @@ void *CusomHeaderInsetObserver = &CusomHeaderInsetObserver;
 
 -(instancetype)init
 {
-    TableViewController *table = [[TableViewController alloc] initWithNibName:@"TableViewController" bundle:nil];
+//    TableViewController *table = [[TableViewController alloc] initWithNibName:@"TableViewController" bundle:nil];
+    TableViewController *root = [[RootViewController alloc]init];
     CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
     
 
-    self = [super initWithControllers:table,collectionView, nil];
+    self = [super initWithControllers:root,collectionView, nil];
     if (self) {
         // your code
         self.segmentMiniTopInset = 64;

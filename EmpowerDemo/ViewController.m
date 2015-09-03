@@ -21,14 +21,14 @@
     //set up first view
     self.scrollView1.pagingEnabled = YES;
     self.contentView1.frame = CGRectMake(0, 0, self.contentView1.bounds.size.width, self.scrollView1.bounds.size.height);
-    self.scrollView1.contentSize = self.contentView1.bounds.size;
+//    self.scrollView1.contentSize = self.contentView1.bounds.size;
     self.scrollView1.showsHorizontalScrollIndicator = NO;
     [self.scrollView1 addSubview:self.contentView1];
     self.pageControl1.numberOfPages = (NSInteger)(self.contentView1.bounds.size.width / self.scrollView1.bounds.size.width);
     self.pageControl1.defersCurrentPageDisplay = YES;
     [self.view addSubview:_scrollView1];
     [self.view addSubview:_pageControl1];
-    _mainscrollview.contentSize = CGSizeMake(290,1080);
+//    _mainscrollview.contentSize = CGSizeMake(290,1080);
     
 //    //set up second view
 //    self.scrollView2.pagingEnabled = YES;

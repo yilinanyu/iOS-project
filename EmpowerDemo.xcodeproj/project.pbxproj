@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E1246D41B6F760000DCBAC6 /* CrumbPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D11B6F760000DCBAC6 /* CrumbPath.m */; };
 		3E1246D51B6F760000DCBAC6 /* CrumbPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */; };
+		3E876C5E1B8E054F0004BC07 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E876C5C1B8E054F0004BC07 /* TableViewController.m */; };
+		3E876C5F1B8E054F0004BC07 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E876C5D1B8E054F0004BC07 /* TableViewController.xib */; };
 		3EB4BE9E1B78A4D1001BCAD5 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BE9D1B78A4D1001BCAD5 /* NavigationViewController.m */; };
 		3EB4BEAC1B78AC8E001BCAD5 /* ARSegmentPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BEA71B78AC8E001BCAD5 /* ARSegmentPageController.m */; };
 		3EB4BEAD1B78AC8E001BCAD5 /* ARSegmentPageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4BEA91B78AC8E001BCAD5 /* ARSegmentPageHeader.m */; };
@@ -19,6 +21,10 @@
 		3EC55D001B73F316009B82AF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55CFF1B73F315009B82AF /* DetailViewController.m */; };
 		3EC55D031B7539E0009B82AF /* ScrollDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */; };
 		3EC55D051B753C6A009B82AF /* moon_challenge copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC55D041B753C6A009B82AF /* moon_challenge copy.png */; };
+		3ED17D3A1B833A1A00305153 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED17D381B833A1A00305153 /* RootViewController.m */; };
+		3ED17D3B1B833A1A00305153 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED17D391B833A1A00305153 /* RootViewController.xib */; };
+		3ED17D401B833A8100305153 /* myScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED17D3D1B833A8100305153 /* myScrollView.m */; };
+		3ED17D411B833A8100305153 /* myCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED17D3F1B833A8100305153 /* myCell.m */; };
 		3ED58CF61B7BFFA200FC0060 /* CustomHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */; };
 		3ED58CFC1B7C019200FC0060 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED58CFA1B7C019200FC0060 /* CollectionViewController.m */; };
 		3ED58CFD1B7C019200FC0060 /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED58CFB1B7C019200FC0060 /* CollectionViewController.xib */; };
@@ -89,6 +95,9 @@
 		3E1246D11B6F760000DCBAC6 /* CrumbPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPath.m; sourceTree = "<group>"; };
 		3E1246D21B6F760000DCBAC6 /* CrumbPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrumbPathRenderer.h; sourceTree = "<group>"; };
 		3E1246D31B6F760000DCBAC6 /* CrumbPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrumbPathRenderer.m; sourceTree = "<group>"; };
+		3E876C5B1B8E054F0004BC07 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		3E876C5C1B8E054F0004BC07 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		3E876C5D1B8E054F0004BC07 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		3EB4BE9C1B78A4D1001BCAD5 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		3EB4BE9D1B78A4D1001BCAD5 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		3EB4BEA51B78AC8E001BCAD5 /* ARSegmentControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentControllerDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +118,13 @@
 		3EC55D011B7539E0009B82AF /* ScrollDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollDetailViewController.h; sourceTree = "<group>"; };
 		3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollDetailViewController.m; sourceTree = "<group>"; };
 		3EC55D041B753C6A009B82AF /* moon_challenge copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moon_challenge copy.png"; sourceTree = "<group>"; };
+		3ED17D371B833A1A00305153 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3ED17D381B833A1A00305153 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3ED17D391B833A1A00305153 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		3ED17D3C1B833A8100305153 /* myScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myScrollView.h; sourceTree = "<group>"; };
+		3ED17D3D1B833A8100305153 /* myScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myScrollView.m; sourceTree = "<group>"; };
+		3ED17D3E1B833A8100305153 /* myCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCell.h; sourceTree = "<group>"; };
+		3ED17D3F1B833A8100305153 /* myCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCell.m; sourceTree = "<group>"; };
 		3ED58CF11B7BFFA200FC0060 /* CustomHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderViewController.h; sourceTree = "<group>"; };
 		3ED58CF21B7BFFA200FC0060 /* CustomHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderViewController.m; sourceTree = "<group>"; };
 		3ED58CF91B7C019200FC0060 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -291,6 +307,9 @@
 				3EC55CF81B72DEEB009B82AF /* CrumbPath */,
 				3EDEE1AC1B6AF4C900459E77 /* Images.xcassets */,
 				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
+				3E876C5B1B8E054F0004BC07 /* TableViewController.h */,
+				3E876C5C1B8E054F0004BC07 /* TableViewController.m */,
+				3E876C5D1B8E054F0004BC07 /* TableViewController.xib */,
 				3EC55CFE1B73F315009B82AF /* DetailViewController.h */,
 				3EC55CFF1B73F315009B82AF /* DetailViewController.m */,
 				3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */,
@@ -305,6 +324,13 @@
 				3EC55D021B7539E0009B82AF /* ScrollDetailViewController.m */,
 				3ED58CFE1B7C048700FC0060 /* ViewController.h */,
 				3ED58CFF1B7C048700FC0060 /* ViewController.m */,
+				3ED17D371B833A1A00305153 /* RootViewController.h */,
+				3ED17D381B833A1A00305153 /* RootViewController.m */,
+				3ED17D391B833A1A00305153 /* RootViewController.xib */,
+				3ED17D3C1B833A8100305153 /* myScrollView.h */,
+				3ED17D3D1B833A8100305153 /* myScrollView.m */,
+				3ED17D3E1B833A8100305153 /* myCell.h */,
+				3ED17D3F1B833A8100305153 /* myCell.m */,
 				3ED58D001B7C048700FC0060 /* ViewController.xib */,
 				3ED58D061B7C182D00FC0060 /* Background3.png */,
 				3EB4BEB01B78AF6F001BCAD5 /* listdownload.jpg */,
@@ -494,7 +520,9 @@
 				3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */,
 				3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */,
 				3EFBC5AF1B71CC870072F774 /* OpenSans-LightItalic.ttf in Resources */,
+				3ED17D3B1B833A1A00305153 /* RootViewController.xib in Resources */,
 				3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */,
+				3E876C5F1B8E054F0004BC07 /* TableViewController.xib in Resources */,
 				3EFBC5B11B71CC870072F774 /* OpenSans-Semibold.ttf in Resources */,
 				3ED58D021B7C048700FC0060 /* ViewController.xib in Resources */,
 				3EFBC5B21B71CC870072F774 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -529,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ED58D011B7C048700FC0060 /* ViewController.m in Sources */,
+				3ED17D401B833A8100305153 /* myScrollView.m in Sources */,
 				3EB4BEB41B78B2CA001BCAD5 /* RFSegmentView.m in Sources */,
 				3EDEE1F21B6AF5BF00459E77 /* PNColor.m in Sources */,
 				3EDEE1F71B6AF5BF00459E77 /* UICountingLabel.m in Sources */,
@@ -548,6 +577,7 @@
 				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
 				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
 				3EDEE1A81B6AF4C900459E77 /* BTGlassScrollViewController.m in Sources */,
+				3ED17D411B833A8100305153 /* myCell.m in Sources */,
 				3EC55CFC1B72E22C009B82AF /* MenuTableViewController.m in Sources */,
 				3ED58CFC1B7C019200FC0060 /* CollectionViewController.m in Sources */,
 				3EB4BEAE1B78AC8E001BCAD5 /* ARSegmentView.m in Sources */,
@@ -557,9 +587,11 @@
 				3EDEE1FC1B6AF5BF00459E77 /* PNPieChartDataItem.m in Sources */,
 				3EDEE1F61B6AF5BF00459E77 /* PNLineChartDataItem.m in Sources */,
 				3EC55D031B7539E0009B82AF /* ScrollDetailViewController.m in Sources */,
+				3ED17D3A1B833A1A00305153 /* RootViewController.m in Sources */,
 				3EDEE1F81B6AF5BF00459E77 /* PNScatterChart.m in Sources */,
 				3EDEE1A51B6AF4C900459E77 /* AppDelegate.m in Sources */,
 				3EB4BE9E1B78A4D1001BCAD5 /* NavigationViewController.m in Sources */,
+				3E876C5E1B8E054F0004BC07 /* TableViewController.m in Sources */,
 				3EDEE1F11B6AF5BF00459E77 /* PNCircleChart.m in Sources */,
 				3EDEE1A21B6AF4C900459E77 /* main.m in Sources */,
 			);

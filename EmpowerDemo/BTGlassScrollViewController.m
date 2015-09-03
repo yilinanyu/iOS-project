@@ -23,6 +23,8 @@
 #import "PNCircleChart.h"
 #import "CustomHeaderViewController.h"
 #import "CollectionViewController.h"
+#import "RootViewController.h"
+#import "TableViewController.h"
 
 
 
@@ -199,7 +201,7 @@
     self.defaultImage = [UIImage imageNamed:@"background3.jpg"];
     self.blurImage = [[UIImage imageNamed:@"background3.jpg"] applyDarkEffect];
 
- CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
+  TableViewController*collectionView = [[TableViewController alloc] initWithNibName:@"TableViewController" bundle:nil];
 //   
 //    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
     
@@ -252,14 +254,9 @@
 
 // right menu button function
 - (IBAction)bbbtnClicked:(id)sender {
-//
-//    CustomHeaderViewController *customHeader = [[CustomHeaderViewController alloc] init];
-//
-//    [self.navigationController pushViewController:customHeader animated:YES];
     
-//    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
     [self.navigationController pushViewController:self.pager animated:YES];
-//    [self.navigationController pushViewController:sc animated:YES];
+
 }
 
 

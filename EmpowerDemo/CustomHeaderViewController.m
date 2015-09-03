@@ -13,6 +13,7 @@
 #import "CollectionViewController.h"
 #import "ViewController.h"
 #import "PNChart.h"
+#import "RootViewController.h"
 
 void *CusomHeaderInsetObserver = &CusomHeaderInsetObserver;
 
@@ -26,13 +27,14 @@ void *CusomHeaderInsetObserver = &CusomHeaderInsetObserver;
 -(instancetype)init
 {
 //
-//    ScrollDetailViewController*collectionView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
-    CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
+//    TableViewController*collectionView = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
+     UITableViewController *root = [[RootViewController alloc]init];
+//    CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
 //    ViewController *collectionView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     
     
 
-    self = [super initWithControllers:collectionView, nil];
+    self = [super initWithControllers:root, nil];
     if (self) {
         // your code
         self.segmentMiniTopInset = 64;

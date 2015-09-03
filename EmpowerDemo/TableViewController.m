@@ -12,14 +12,24 @@
 
 @end
 
-
 @implementation TableViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+     //使用代理方法实现翻页效果
+    
+   
+}
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView==scrollview)
+    {
+        int page= scrollview.contentOffset.x/320;
+        pagecontrol.currentPage=page;
+        
+    }
 }
 
 
@@ -28,10 +38,10 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSString *)segmentTitle
-{
-    return @"TableView";
-}
+//-(NSString *)segmentTitle
+//{
+//    return @"TableView";
+//}
 
 -(UIScrollView *)streachScrollView
 {
@@ -41,34 +51,50 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 3;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        
-        UIScrollView *previewScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 200)];
-        previewScrollView.backgroundColor = [UIColor redColor];
-//        [previewScrollView setContentSize:CGSizeMake(1000, 200)];
-        [[cell contentView] addSubview:previewScrollView];
-        [previewScrollView setUserInteractionEnabled:NO];
-        [cell.contentView addGestureRecognizer:previewScrollView.panGestureRecognizer];
-        
-        UIPageControl*previewPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 30, tableView.frame.size.width, 200)];
-        
-        [previewPageControl setNumberOfPages:4];
-        [[cell contentView] addSubview:previewPageControl];
-    }
+    scrollview=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, 150)];
+    //分页设置
+    scrollview.pagingEnabled=YES;
+    //滚动条显示设置
+    scrollview.showsHorizontalScrollIndicator=NO;
+    scrollview.showsVerticalScrollIndicator=NO;
+    //视图内容的尺寸
+    //    scrollview.contentSize=CGSizeMake(320*4, 150);
+    //    self.tableView.tableHeaderView=scrollview;
+    scrollview.delegate=self;
+    //添加内容
+    //    float x=0;
+    //    for (int i=1; i<=4; i++)
+    //    {
+    //        UIImageView *imageview=[[UIImageView alloc]initWithFrame:CGRectMake(x, 0, 320, 150)];
+    //        NSString *imagename=[NSString stringWithFormat:@"%d.jpg",i];
+    //        imageview.image=[UIImage imageNamed:imagename];
+    //        [scrollview addSubview:imageview];
+    //        x+=320;
+    //    }
+    //    self.tableView.tableHeaderView=scrollview;
     
-    return (UITableViewCell *)cell;
+    
+    //创建分页控制器，添加到tableview中
+    pagecontrol=[[UIPageControl alloc]initWithFrame:CGRectMake(200, 130, 20, 20)];
+    //总得页数
+    pagecontrol.numberOfPages=4;
+    //当前显示的页数
+    pagecontrol.currentPage=0;
+    [scrollview addSubview:pagecontrol];
+
+    
+    cell.textLabel.text = @"tableView";
+    [cell addSubview:scrollview];
+    return cell;
 }
 
 /*
