@@ -51,7 +51,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -62,6 +62,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     scrollview=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, 320, 150)];
     //分页设置
+    scrollview.backgroundColor = [UIColor blueColor];
     scrollview.pagingEnabled=YES;
     //滚动条显示设置
     scrollview.showsHorizontalScrollIndicator=NO;
@@ -92,7 +93,6 @@
     [scrollview addSubview:pagecontrol];
 
     
-    cell.textLabel.text = @"tableView";
     [cell addSubview:scrollview];
     return cell;
 }
