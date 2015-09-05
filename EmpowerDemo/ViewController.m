@@ -28,7 +28,7 @@
     self.pageControl1.defersCurrentPageDisplay = YES;
     [self.view addSubview:_scrollView1];
     [self.view addSubview:_pageControl1];
-//    _mainscrollview.contentSize = CGSizeMake(290,1080);
+   _mainscrollview.contentSize = CGSizeMake(290,1080);
     
 //    //set up second view
 //    self.scrollView2.pagingEnabled = YES;

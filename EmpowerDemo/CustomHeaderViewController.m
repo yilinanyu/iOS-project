@@ -10,7 +10,7 @@
 #import "UIImage+ImageEffects.h"
 #import "CustomHeader.h"
 #import "ScrollDetailViewController.h"
-#import "CollectionViewController.h"
+//#import "CollectionViewController.h"
 #import "ViewController.h"
 #import "PNChart.h"
 #import "RootViewController.h"
