@@ -22,7 +22,7 @@
 #import "RFSegmentView.h"
 #import "PNCircleChart.h"
 #import "CustomHeaderViewController.h"
-//#import "CollectionViewController.h"
+#import "CollectionViewController.h"
 #import "RootViewController.h"
 #import "ViewController.h"
 //#import "TableViewController.h"
@@ -202,7 +202,9 @@
     self.defaultImage = [UIImage imageNamed:@"background3.jpg"];
     self.blurImage = [[UIImage imageNamed:@"background3.jpg"] applyDarkEffect];
 
-  ViewController*collectionView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+//  RootViewController*collectionView = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    
+      CollectionViewController *collectionView = [[CollectionViewController alloc] initWithNibName:@"CollectionViewController" bundle:nil];
 //   
 //    ScrollDetailViewController*sc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ScrollDetailViewControllerID"];
     

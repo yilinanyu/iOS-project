@@ -57,6 +57,8 @@
 		3EDEE2051B6AF64500459E77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2041B6AF64500459E77 /* Foundation.framework */; };
 		3EDEE2071B6AF65000459E77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2061B6AF65000459E77 /* UIKit.framework */; };
 		3EDEE2091B6AF65E00459E77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */; };
+		3EEDE6FD1BB0D6E30011312B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDE6FB1BB0D6E30011312B /* CollectionViewController.m */; };
+		3EEDE6FE1BB0D6E30011312B /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EEDE6FC1BB0D6E30011312B /* CollectionViewController.xib */; };
 		3EFBC5881B7182410072F774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5871B7182410072F774 /* Main.storyboard */; };
 		3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC5991B71C3390072F774 /* menuButton.png */; };
 		3EFBC59C1B71C3390072F774 /* menuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBC59A1B71C3390072F774 /* menuButton@2x.png */; };
@@ -179,6 +181,9 @@
 		3EDEE2041B6AF64500459E77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3EDEE2061B6AF65000459E77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3EDEE2081B6AF65E00459E77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3EEDE6FA1BB0D6E30011312B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		3EEDE6FB1BB0D6E30011312B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		3EEDE6FC1BB0D6E30011312B /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
 		3EFBC5871B7182410072F774 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3EFBC5991B71C3390072F774 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
 		3EFBC59A1B71C3390072F774 /* menuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuButton@2x.png"; sourceTree = "<group>"; };
@@ -299,6 +304,9 @@
 				3EDEE1AE1B6AF4C900459E77 /* LaunchScreen.xib */,
 				3EC55CFE1B73F315009B82AF /* DetailViewController.h */,
 				3EC55CFF1B73F315009B82AF /* DetailViewController.m */,
+				3EEDE6FA1BB0D6E30011312B /* CollectionViewController.h */,
+				3EEDE6FB1BB0D6E30011312B /* CollectionViewController.m */,
+				3EEDE6FC1BB0D6E30011312B /* CollectionViewController.xib */,
 				3EDEE1C81B6AF59800459E77 /* BTGlassScrollView.h */,
 				3EDEE1C91B6AF59800459E77 /* BTGlassScrollView.m */,
 				3EDEE1CA1B6AF59800459E77 /* UIImage+ImageEffects.h */,
@@ -466,6 +474,7 @@
 				TargetAttributes = {
 					3EDEE19B1B6AF4C900459E77 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 88Z8JFDK66;
 					};
 					3EDEE1B41B6AF4CA00459E77 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -503,6 +512,7 @@
 				3EDEE1B01B6AF4C900459E77 /* LaunchScreen.xib in Resources */,
 				3EFBC5B81B71F03B0072F774 /* emPowerBolt@2x.png in Resources */,
 				3EFBC5AF1B71CC870072F774 /* OpenSans-LightItalic.ttf in Resources */,
+				3EEDE6FE1BB0D6E30011312B /* CollectionViewController.xib in Resources */,
 				3ED17D3B1B833A1A00305153 /* RootViewController.xib in Resources */,
 				3EFBC59B1B71C3390072F774 /* menuButton.png in Resources */,
 				3EFBC5B11B71CC870072F774 /* OpenSans-Semibold.ttf in Resources */,
@@ -555,6 +565,7 @@
 				3EDEE1FB1B6AF5BF00459E77 /* PNPieChart.m in Sources */,
 				3ED58D051B7C049300FC0060 /* FXPageControl.m in Sources */,
 				3EB4BEAC1B78AC8E001BCAD5 /* ARSegmentPageController.m in Sources */,
+				3EEDE6FD1BB0D6E30011312B /* CollectionViewController.m in Sources */,
 				3EDEE1EF1B6AF5BF00459E77 /* PNBarChart.m in Sources */,
 				3EDEE1F51B6AF5BF00459E77 /* PNLineChartData.m in Sources */,
 				3EDEE1FA1B6AF5BF00459E77 /* PNScatterChartDataItem.m in Sources */,
@@ -691,9 +702,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EmpowerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -701,9 +715,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EmpowerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
